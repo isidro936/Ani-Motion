@@ -5,7 +5,7 @@
   "main": "style.scss",
   "scripts": {
     "test": "start",
-    "sass": "sass --watch style.scss style.css"
+    "sass": "sass --watch style.scss css/style.css"
   },
   "author": "Isidro936",
   "keywords": ["animation", "motion", "library", "effects"],

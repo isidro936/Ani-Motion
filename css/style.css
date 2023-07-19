@@ -86,11 +86,8 @@
   0% {
     transform: scale(0);
   }
-  50% {
-    transform: scale(1);
-  }
   100% {
-    transform: scale(0);
+    transform: scale(1);
   }
 }
 .scale {
@@ -109,31 +106,7 @@
   }
 }
 .scaleReverse {
-  animation: scaleReverse 3s ease;
-}
-
-@keyframes rebound {
-  0% {
-    transform: translateY(-100px);
-  }
-  50% {
-    transform: translateY(0px);
-  }
-  60% {
-    transform: translateY(-35px);
-  }
-  75% {
-    transform: translateY(1px);
-  }
-  90% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-.rebound {
-  animation: rebound 2s ease;
+  animation: scaleReverse 3s ease both;
 }
 
 @keyframes fallBounce {
@@ -157,6 +130,39 @@
 }
 .fallBounce {
   animation: fallBounce 1.5s ease-in;
+}
+
+@keyframes vibrate {
+  0%, 100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  40% {
+    transform: translateX(4px) rotate(4deg);
+  }
+  60% {
+    transform: translateX(-3px) rotate(-3deg);
+  }
+  80% {
+    transform: translateX(3px) rotate(3deg);
+  }
+}
+.vibrate {
+  animation: vibrate 1s ease infinite;
+}
+
+@keyframes repose {
+  0%, 100% {
+    scale: 0.8;
+  }
+  50% {
+    scale: 1;
+  }
+}
+.repose {
+  animation: repose 1s ease infinite;
 }
 
 @keyframes fadeOff {
@@ -215,6 +221,7 @@
   }
 }
 body {
+  background-color: black;
   position: relative;
   padding: 0;
   margin: 0;
@@ -222,12 +229,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2em;
 }
 
-div {
-  background-color: aqua;
-  width: 100px;
-  height: 100px;
+h1, span {
+  font-size: 4em;
+  font-weight: 700;
+  font-family: "Verdana";
+  color: white;
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */

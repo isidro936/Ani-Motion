@@ -178,7 +178,7 @@
 
     @keyframes repose {
         0%,100%{
-            scale: calc($scale / 2 + 0.2);
+            scale: calc($scale - 0.5);
         }
         50%{
             scale: $scale;

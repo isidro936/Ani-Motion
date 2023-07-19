@@ -20,7 +20,10 @@ class AniIntersection {
         } else {
             this._objectProp.element.classList.remove(this._objectProp.animation);
         }
+        
         });
+
+        
     }
 }
 
@@ -41,18 +44,11 @@ class TextChange {
         this._currentIndex = (this._currentIndex + 1) % this._objectProp.texts.length;
         this._objectProp.element.textContent = this._objectProp.texts[this._currentIndex];
         this._objectProp.element.classList.remove(this._objectProp.animation);
-        void this._objectProp.element.offsetWidth; // Reiniciar la animación
+        void this._objectProp.element.offsetWidth;
         this._objectProp.element.classList.add(this._objectProp.animation);
         }, this._objectProp.interval);
     }
 }
-
-// Uso de la clase TextChange
-const miElemento = document.querySelector('#mielemento');
-const elemento = new AniIntersection({
-    element: miElemento,
-    animation: 'fallBounce'
-})
 
 
 
