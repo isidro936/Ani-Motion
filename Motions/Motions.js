@@ -1,4 +1,4 @@
-class Animate {
+class AniIntersection {
     constructor(objectProp) {
         this._objectProp = objectProp
 
@@ -23,13 +23,6 @@ class Animate {
         });
     }
 }
-
-const mielemento = document.querySelector('#mielemento')
-const animacion2 = new Animate({
-    element:mielemento,
-    animation: 'slideY'
-})
-
 
 
 class TextChange {
@@ -56,13 +49,11 @@ class TextChange {
 
 // Uso de la clase TextChange
 const miElemento = document.querySelector('#mielemento');
-
-const textChange = new TextChange({
+const elemento = new AniIntersection({
     element: miElemento,
-    texts: ['prueba 1', 'prueba 2', 'prueba 3'],
-    animation: 'slideY',
-    interval: 2000
-});
+    animation: 'fallBounce'
+})
+
 
 
 

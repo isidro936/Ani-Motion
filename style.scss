@@ -11,10 +11,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-h1{
-    transition: all 1s;
-    font-size: 4em;
-    font-family: 'Verdana';
-    display: flex;
-    gap: 0.5em;
+div{
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
 }

@@ -1,0 +1,17 @@
+{
+  "name": "ani-motion",
+  "version": "0.0.1",
+  "description": "Animation library",
+  "main": "style.scss",
+  "scripts": {
+    "test": "start",
+    "sass": "sass --watch style.scss style.css"
+  },
+  "author": "Isidro936",
+  "keywords": ["animation", "motion", "library", "effects"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isidro936/Ani-Motion"
+  },
+  "license": "ISC"
+}
