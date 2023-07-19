@@ -1,0 +1,48 @@
+.flip{
+    animation: rotate360 3s ease backwards;
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate3d(0, 50, 0, 0deg) 
+        translateY(0);
+    }
+    50% {
+        transform: rotate3d(0, 1, 0, 180deg) 
+        translateY(0px);
+    }
+    100% {
+        transform: rotate3d(0, 1, 0, 360deg) 
+        translateY(0);
+    }
+}
+
+@keyframes slideY {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.slideY{
+    animation: slideY 1s ease;
+}
+
+@keyframes slideX{
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slideX{
+    animation: slideX 2s ease;
+}
