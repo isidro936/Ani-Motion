@@ -1,10 +1,14 @@
 @use 'Ani-Motion/Motions/Motions';
-@import 'Ani-Motion/Ani-Mixins/ani-mixins';
+@import 'Ani-Motion/Motions/Motions';
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body{
-    background-color: black;
-    position: relative;
+    background-color: white;
     padding: 0;
     margin: 0;
     height: 100vh;
@@ -12,16 +16,12 @@ body{
     justify-content: center;
     align-items: center;
     gap: 2em;
+    overflow-x: hidden;
 }
-h1{
-    font-size: 4em;
-    font-weight: 700;
-    font-family: 'Verdana';
-    color: white;
-    display: flex;
-
-}
-
-span{
-    @extend h1;
+div{
+    box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.18);
+    background: linear-gradient(to right, #FFBD59, #ff7559);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }

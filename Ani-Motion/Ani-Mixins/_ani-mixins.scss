@@ -186,4 +186,47 @@
     }
 }
 
+@mixin roll($duration, $delay, $mode, $time-line, $distance){
+    animation: roll $duration $delay $mode $time-line;
+
+    @keyframes roll {
+        0%{
+            transform: translateX($distance) rotate(0deg);
+        }
+        100%{
+            transform: translateX(0) rotate(360deg);
+        }
+    }
+}
+
+@mixin rollLeft($duration, $delay, $mode, $time-line){
+    position: absolute ;
+    left: 0;
+    animation: rollLeft $duration $delay $mode $time-line ; 
+
+    @keyframes rollLeft {
+        0%{
+            transform: translateX(-100%) rotate(0deg);
+        }
+        100%{
+            transform: translateX(0) rotate(360deg);
+        }
+    }
+}
+
+@mixin rollRight($duration, $delay, $mode, $time-line){
+    position: absolute ;
+    right: 0;
+    animation: rollRight $duration $delay $mode $time-line ; 
+
+    @keyframes rollRight {
+        0%{
+            transform: translateX(100%) rotate(0deg);
+        }
+        100%{
+            transform: translateX(0) rotate(360deg);
+        }
+    }
+}
+
 

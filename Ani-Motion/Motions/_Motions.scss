@@ -1,5 +1,22 @@
+*{
+    scroll-behavior: smooth;
+}
+
+.rotate{
+    animation: rotate 1s ease;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 .rotate360{
-    animation: rotate360 3s ease backwards;
+    animation: rotate360 3s ease forwards;
 }
 
 @keyframes rotate360 {
@@ -20,7 +37,7 @@
 @keyframes slideY {
     from {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(-100px);
     }
     to {
         opacity: 1;
@@ -180,4 +197,17 @@
 
 .repose{
     animation: repose 1s ease infinite;
+}
+
+@mixin parallaX{
+    background-size:cover ;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+@mixin textImg{
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

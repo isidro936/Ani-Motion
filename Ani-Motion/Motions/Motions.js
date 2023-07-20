@@ -50,6 +50,39 @@ class TextChange {
     }
 }
 
+class animation{
+    constructor(objectProp){
+        this._objectProp = objectProp;
+        if(this._objectProp.event === 'click'){
+            this._eventClick()
+        }
+        if(this._objectProp.event === 'hover'){
+            this._eventhover()
+        }
+    }
+
+    _eventClick(){
+        this._objectProp.element.addEventListener('click',()=>{
+            this._objectProp.element.classList.add(this._objectProp.animation)
+            if(this._objectProp.timeout != 0){
+                setTimeout(()=>{
+                    this._objectProp.element.classList.remove(this._objectProp.animation)
+                },this._objectProp.timeout)
+            }
+        })
+    }
+
+    _eventhover(){
+        this._objectProp.element.addEventListener('mouseover',()=>{
+            this._objectProp.element.classList.add(this._objectProp.animation)
+            if(this._objectProp.timeout != 0){
+                setTimeout(()=>{
+                    this._objectProp.element.classList.remove(this._objectProp.animation)
+                },this._objectProp.timeout)
+            }
+        })
+    }
+}
 
 
 
