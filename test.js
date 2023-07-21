@@ -1,7 +1,8 @@
 const miElemento = document.querySelector('#mielemento');
+
 new animation({
     element: miElemento,
-    animation: 'rotate',
+    animation: 'slideY', 
     event: 'click',
-    timeout: 3000
+    timeout: 1000
 })

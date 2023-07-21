@@ -153,20 +153,20 @@
     transform: translate(0);
   }
   20% {
-    transform: translateX(-5px) rotate(-5deg);
+    transform: translateX(-10px) rotate(-10deg);
   }
   40% {
-    transform: translateX(4px) rotate(4deg);
+    transform: translateX(8px) rotate(8deg);
   }
   60% {
-    transform: translateX(-3px) rotate(-3deg);
+    transform: translateX(-6px) rotate(-6deg);
   }
   80% {
     transform: translateX(3px) rotate(3deg);
   }
 }
 .vibrate {
-  animation: vibrate 1s ease infinite;
+  animation: vibrate 1s ease both infinite;
 }
 
 @keyframes repose {
@@ -178,7 +178,7 @@
   }
 }
 .repose {
-  animation: repose 1s ease infinite;
+  animation: repose 5s ease infinite;
 }
 
 * {
@@ -336,20 +336,20 @@
     transform: translate(0);
   }
   20% {
-    transform: translateX(-5px) rotate(-5deg);
+    transform: translateX(-10px) rotate(-10deg);
   }
   40% {
-    transform: translateX(4px) rotate(4deg);
+    transform: translateX(8px) rotate(8deg);
   }
   60% {
-    transform: translateX(-3px) rotate(-3deg);
+    transform: translateX(-6px) rotate(-6deg);
   }
   80% {
     transform: translateX(3px) rotate(3deg);
   }
 }
 .vibrate {
-  animation: vibrate 1s ease infinite;
+  animation: vibrate 1s ease both infinite;
 }
 
 @keyframes repose {
@@ -361,7 +361,7 @@
   }
 }
 .repose {
-  animation: repose 1s ease infinite;
+  animation: repose 5s ease infinite;
 }
 
 * {
