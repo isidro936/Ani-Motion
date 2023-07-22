@@ -13,3 +13,27 @@ new animation({
     event: 'click'
     
 })
+
+new animation({
+    element: document.querySelector('.cube1'),
+    animation: 'scaleReverse',
+    event: 'click'
+})
+
+new animation({
+    element: document.querySelector('.cube2'),
+    animation: 'vibrate',
+    event: 'click'
+})
+
+new animation({
+    element: document.querySelector('.cube3'),
+    animation: 'float',
+    event: 'click'
+})
+
+new animation({
+    element: document.querySelector('.cube4'),
+    animation: 'repose',
+    event: 'click'
+})

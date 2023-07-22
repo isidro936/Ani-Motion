@@ -1,5 +1,5 @@
 @import '../utils/ani-mixins';
-$color-primario: black;
+$color-primario:#424242;;
 $color-amarillo:#FFBD59;
 
 
@@ -24,12 +24,12 @@ $color-amarillo:#FFBD59;
     }
     &__p-welcome{
         font-size: 1.2em;
-        color: #424242;
+        color: $color-primario;
         
     }
     &__h1{
         font-size: 4em;
-        color: #424242;
+        color: $color-primario;
     }
     &__h3{
         font-weight: 500;
@@ -78,24 +78,119 @@ $color-amarillo:#FFBD59;
     color:  #00000070;
 }
 
-.shadow1 {
-    z-index: -1;
-    left: 0;
-    top: 50%;
+.cube1{
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: $color-amarillo;
     position: absolute;
-    box-shadow: 0 0px  9000px 70px rgb(255, 247, 0, 0.55); /* Ajusta el valor del desenfoque y la transparencia */
+    right: 10em;
+    top: 20%;
+    rotate:(30deg);
+    display: grid;
+    place-content: center;
+    @include scale(1s, .1s, both,ease)
 }
 
-.shadow3 {
-    z-index: -1;
-    right: 0%;
-    top: 30%;
+.cube2{
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: $color-amarillo;
     position: absolute;
-     box-shadow: 0 0px  9000px 70px rgb(255, 247, 0, 0.55);
+    right: 8em;
+    top: 50%;
+    rotate:(20deg);
+    display: grid;
+    place-content: center;
+    @include scale(1s, .1s, both,ease)
+}
 
+.cube3{
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: $color-amarillo;
+    position: absolute;
+    left: 10em;
+    top: 20%;
+    rotate:(-30deg);
+    display: grid;
+    place-content: center;
+    @include scale(1s, .1s, both,ease)
+}
+
+.cube4{
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: $color-amarillo;
+    position: absolute;
+    left: 16em;
+    top: 60%;
+    rotate:(-20deg);
+    display: grid;
+    place-content: center;
+    @include scale(1s, .1s, both,ease)
+}
+
+.cube__p{
+    font-family: 'Poppins';
+    color:white;
 }
 
 .main{
+    min-height: 100vh;
+}
+
+.about{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+    &__icon{
+        padding:2em 1.5em;
+        background-color: #FFBD5970;
+        border-radius: 10px;
+    }
+
+    &__span{
+        font-size: 4em;
+        font-weight: 700;
+        color: #ff9900;
+        line-height: 0.5em;
+    }
+
+    &__text{
+        width: 70%;
+        text-align: center;
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    &__h2{
+        font-size: 3em;
+    }
+
+    &__p{
+        font-size: 1.3em;
+    }
+
+    &__links{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+    }
+
+    &__link{
+        background-color: #f8f9fa;
+        border: 1px solid #d4d4d47a;
+        border-radius: 5px;
+        padding: 1em;
+    }
 }
 
