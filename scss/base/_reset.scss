@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img, picture, video{
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}

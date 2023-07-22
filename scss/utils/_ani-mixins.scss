@@ -229,4 +229,11 @@
     }
 }
 
+@mixin btn-scale($scale, $rotate){
+    transition: all .3s;
+    &:hover{
+        transform: scale($scale) rotate($rotate);
+    }
+}
+
 

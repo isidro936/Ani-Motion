@@ -1,0 +1,101 @@
+@import '../utils/ani-mixins';
+$color-primario: black;
+$color-amarillo:#FFBD59;
+
+
+.header{
+    width: 100%;
+    height: calc(100vh - 4em);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+    position: relative;
+    overflow: hidden;
+
+    &__welcome{
+        width: 70%;
+        padding: 0 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        text-align: center;
+    }
+    &__p-welcome{
+        font-size: 1.2em;
+        color: #424242;
+        
+    }
+    &__h1{
+        font-size: 4em;
+        color: #424242;
+    }
+    &__h3{
+        font-weight: 500;
+        font-family: 'system-ui';
+        font-size: 1em;
+    }
+    &__info{
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    &__link{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    &__span{
+        @extend .header__h3;
+    
+    }
+
+    &__link-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+        
+
+    }
+
+    &__buttons{
+        display: flex;
+        gap: 2em;
+    }
+
+    &__icon{
+        font-size: 1.4em;
+        @include btn-scale(1.1, 0deg);
+    }
+
+
+}
+
+.h--50{
+    color:  #00000070;
+}
+
+.shadow1 {
+    z-index: -1;
+    left: 0;
+    top: 50%;
+    position: absolute;
+    box-shadow: 0 0px  9000px 70px rgb(255, 247, 0, 0.55); /* Ajusta el valor del desenfoque y la transparencia */
+}
+
+.shadow3 {
+    z-index: -1;
+    right: 0%;
+    top: 30%;
+    position: absolute;
+     box-shadow: 0 0px  9000px 70px rgb(255, 247, 0, 0.55);
+
+}
+
+.main{
+    height: 100vh;
+}
+
