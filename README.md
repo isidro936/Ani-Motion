@@ -53,7 +53,60 @@ En tu archivo sass donde tienes los estilos del elemento:
 
 # Motions
 
-Versión beta 0.5
+# Motions
+
+
+## Instalación
+
+Para empezar a utilizar **Ani-Motion**, simplemente incluye los archivos Sass y JavaScript en tu proyecto:
+
+1. Descarga los archivos de la librería.
+2. Importa el archivo Sass en tu proyecto principal:
+
+```scss
+@use 'dist/Motions/Motions';
+```
+o puedes incluirlo directamente en el HTML, aunque para algunos efectos de texto se usan los mixins de sass:
+
+```html
+<link rel="stylesheet" href="dist/Motions/Motions.css">
+```
+
+```html
+<script src='dist/Motions/Motions.js'></script>
+```
+
+## Uso
+
+Con Ani-Motions de Sass, puedes aplicar animaciones personalizadas a tus elementos HTML con solo unas pocas líneas de código. Aquí tienes un ejemplo básico de cómo usar un Motions para animar un elemento:
+
+```html
+<div class="animated-element">¡Hola, Ani-Motion!</div>
+
+```
+
+En tu archivo javascript:
+
+```javascript
+new animation({
+    element: document.querySelector('tuElemento'),
+    animation: 'vibrate',//elige tu animacion de preferencia
+    timeout: 1000,//el timeout es opcional, sirve para reiniciar la animación
+    event: 'click'//eventos disponibles:hover y click
+    
+})
+```
+Otro caso de uso seria para un efecto de texto cambiante:
+
+```javascript
+new TextChange({
+    element: document.querySelector('.header__span'),
+    texts:['Mixins','Motions','Effects'],//textos sin limite
+    animation:'slideY',
+    interval: 3000,//tiempo de cambio
+    
+})
+```
 # Contribución
 
 ¡Tu contribución es bienvenida! Si tienes alguna idea o mejora para Ani-Motion, siéntete libre de enviar un pull request o abrir un issue en el repositorio.
