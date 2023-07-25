@@ -1,4 +1,4 @@
-
+import {TextChange, animation} from '../../node_modules/ani-motion936/Motions.js'
 const btnCopy = document.querySelectorAll('.bi-clipboard');
 
 btnCopy.forEach((btncopiar) => {
