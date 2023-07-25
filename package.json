@@ -10,8 +10,5 @@
     "server": "http-server"
   },
   "author": "isidro936",
-  "license": "MIT",
-  "dependencies": {
-    "ani-motion936": "^0.0.7"
-  }
+  "license": "MIT"
 }
