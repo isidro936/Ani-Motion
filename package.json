@@ -1,12 +1,12 @@
 {
   "name": "ani-motion936",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Animation library",
-  "main": "style.scss",
+  "main": "Ani-Motion",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run sass",
-    "sass": "sass --watch scss/style.scss css/style.css"
+    "sass": "sass --watch Motions/_Motions.scss Motions/Motions.css"
   },
   "author": "isidro936",
   "keywords": ["animation", "motion", "effects", "web development", "CSS animations", "interactive", "transitions", "user experience", "web design", "customizable", "JavaScript library", "dynamic", "modern", "frontend", "creative", "UI animations"],

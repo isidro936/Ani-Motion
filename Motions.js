@@ -1,4 +1,4 @@
-class AniIntersection {
+export class AniIntersection {
     constructor(objectProp) {
         this._objectProp = objectProp
 
@@ -28,7 +28,7 @@ class AniIntersection {
 }
 
 
-class TextChange {
+export class TextChange {
     constructor(objectProp) {
         this._objectProp = objectProp;
         this._currentIndex = 0;
@@ -50,7 +50,7 @@ class TextChange {
     }
 }
 
-class animation{
+export class animation{
     constructor(objectProp){
         this._objectProp = objectProp;
 
