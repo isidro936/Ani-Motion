@@ -1,0 +1,184 @@
+* {
+  scroll-behavior: smooth;
+}
+
+.rotate {
+  animation: rotate 1s ease;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.rotate360 {
+  animation: rotate360 3s ease forwards;
+}
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate3d(0, 50, 0, 0deg) translateY(0);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 180deg) translateY(-20px);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg) translateY(0);
+  }
+}
+@keyframes slideY {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.slideY {
+  animation: slideY 1s ease;
+}
+
+@keyframes slideX {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.slideX {
+  animation: slideX 2s ease;
+}
+
+@keyframes fadeOff {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeOff {
+  animation: fadeOff 2s ease;
+}
+
+@keyframes spiral {
+  from {
+    rotate: 0deg;
+    transform: translateX(400px);
+  }
+  to {
+    rotate: 360deg;
+    transform: translateX(0);
+  }
+}
+.spiral {
+  animation: spiral 3s ease;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.float {
+  animation: float 2s ease infinite;
+}
+
+@keyframes Scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.scale {
+  animation: Scale 3s ease;
+}
+
+@keyframes scaleReverse {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.scaleReverse {
+  animation: scaleReverse 3s ease both;
+}
+
+@keyframes fallBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  20%, 50%, 80%, 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-50px);
+  }
+  60% {
+    transform: translateY(-30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+}
+.fallBounce {
+  animation: fallBounce 1.5s ease-in;
+}
+
+@keyframes vibrate {
+  0%, 100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateX(-10px) rotate(-10deg);
+  }
+  40% {
+    transform: translateX(8px) rotate(8deg);
+  }
+  60% {
+    transform: translateX(-6px) rotate(-6deg);
+  }
+  80% {
+    transform: translateX(3px) rotate(3deg);
+  }
+}
+.vibrate {
+  animation: vibrate 1s ease both infinite;
+}
+
+@keyframes repose {
+  0%, 100% {
+    scale: 0.8;
+  }
+  50% {
+    scale: 1;
+  }
+}
+.repose {
+  animation: repose 5s ease infinite;
+}
+
+/*# sourceMappingURL=Motions.css.map */

@@ -1,7 +1,16 @@
+// Base
 @use 'base/reset';
 @use 'base/fonts';
-@use 'components/nav';
-@use 'pages/index.scss';
+
+// Componentes
 @use 'components/buttons';
-@use 'utils/Motions';
+@use 'components/nav';
 @use 'components/version';
+@use 'components/about-content';
+@use 'components/footer';
+
+// Paginas
+@use 'pages/index';
+
+// Ani-Motion
+@use '../node_modules/ani-motion936/dist/Motions/Motions';

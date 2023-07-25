@@ -1,10 +1,9 @@
-@import '../utils/ani-mixins';
 $color-amarillo:#FFBD59;
 .nav{
     width: 100%;
     height: 4em;
     background-color: white;
-    padding: 1em;
+    padding: 2em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,9 +14,10 @@ $color-amarillo:#FFBD59;
     top: 0;
     
     &__logo{
-        width: 7em;
-        height: 100%;
+        width: 3em;
+        height: 110%;
         display: flex;
+        margin-right: 3.5em;
     }
 
     &__ul{
@@ -33,9 +33,65 @@ $color-amarillo:#FFBD59;
         }
     }
 
+    &__close{
+        display: none;
+    }
+
     &__li--active{
         font-size: 1.2em;
         color: $color-amarillo;
     }
 
+    &__toggle{
+        font-size: 2em;
+        cursor: pointer;
+        display: none;
+    }
+
+}
+
+.bi-x{
+    font-size: 3em;
+    display: none;
+}
+
+@media(max-width:800px) {
+    .nav{
+        
+        &__ul{
+            transition: all 1s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: white;
+            width: 0vw;
+            height: 100vh;
+            flex-direction: column;
+            gap: 4em;
+            overflow: hidden;
+            
+
+        }
+
+
+        &__version{
+            display: block;
+            margin-right: 4em;
+        }
+
+        &__toggle{
+            
+            display: block;
+        }
+    }
+
+    .bi-x{
+        display: inline;
+    }
+}
+
+.nav__ul--active{
+    left: 0;
+    width: 100vw;
+    padding: 2em;
 }

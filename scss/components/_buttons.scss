@@ -1,11 +1,12 @@
-@import '../utils/ani-mixins';
+@import '../../node_modules/ani-motion936/dist/Ani-Mixins/ani-mixins';
 $color-amarillo:#FFBD59;
+$color-primario:#424242;
 
 .button-primary{
     background-color: $color-amarillo;
-    border: 2px solid #424242;
+    border: 2px solid $color-primario;
     border-radius: 5px;
-    color: #424242;
+    color: $color-primario;
     padding: 0.5em 1em;
     font-size: 1.1em;
     font-weight: 500;
@@ -13,6 +14,8 @@ $color-amarillo:#FFBD59;
     @include btn-scale(1.2, -5deg);
 }
 
-.button-secondary{
-    @extend .button-primary;
+@media (max-width:900px) {
+    .button-primary{
+        font-size: 0.9em;
+    }
 }

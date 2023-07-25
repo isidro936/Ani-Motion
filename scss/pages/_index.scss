@@ -1,11 +1,11 @@
-@import '../utils/ani-mixins';
+@import '../../node_modules/ani-motion936/dist/Ani-Mixins/ani-mixins';
 $color-primario:#424242;;
 $color-amarillo:#FFBD59;
 
 
 .header{
     width: 100%;
-    height: calc(100vh - 4em);
+    min-height: calc(100vh - 4em);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,6 +13,7 @@ $color-amarillo:#FFBD59;
     padding: 2em;
     position: relative;
     overflow: hidden;
+    
 
     &__welcome{
         width: 70%;
@@ -74,9 +75,25 @@ $color-amarillo:#FFBD59;
 
 }
 
+@media(max-width:800px){
+    .header{
+        padding: 2em 0em;
+
+        &__welcome{
+            width: 100%;
+        }
+        &__h1{
+            font-size: 3em;
+            text-align: center;
+        }
+    }
+}
+
 .h--50{
     color:  #00000070;
 }
+
+
 
 .cube1{
     width: 70px;
@@ -134,6 +151,12 @@ $color-amarillo:#FFBD59;
     @include scale(1s, .1s, both,ease)
 }
 
+@media (max-width:800px) {
+    .cube{
+        display: none;
+    }
+}
+
 .cube__p{
     font-family: 'Poppins';
     color:white;
@@ -144,11 +167,13 @@ $color-amarillo:#FFBD59;
 }
 
 .about{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 3em;
+    padding: 3em 0em;
+    color: $color-primario;
     &__icon{
         padding:2em 1.5em;
         background-color: #FFBD5970;
@@ -180,9 +205,7 @@ $color-amarillo:#FFBD59;
     }
 
     &__links{
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
         gap: 1em;
     }
 
@@ -190,7 +213,125 @@ $color-amarillo:#FFBD59;
         background-color: #f8f9fa;
         border: 1px solid #d4d4d47a;
         border-radius: 5px;
-        padding: 1em;
+        padding: 0.5em 1em;
+        font-family:monospace;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ::before{
+            content: '$ ';
+        }
+    }
+
+    &__link-direct{
+        display: flex;
+        align-items: center;
+        padding: 0.5em 1em;
+    }
+
+    &__a{
+        color: rgb(0, 110, 255);
+        font-size: 1.2em; 
+    }
+}
+
+@media (max-width:800px) {
+    .about{
+        &__text{
+            width: 100%;
+        }
+        &__h2{
+            font-size: 2em;
+        }
+        &__links{
+            flex-direction: column;
+        }
+    }
+}
+
+
+.bi-clipboard{
+    cursor: pointer;
+}
+
+.about-mixin{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-flow: row wrap;
+    padding: 2em;
+    gap: 010px;
+    color: $color-primario;
+    text-align: center;
+    &__h3{
+        font-size: 2em;
+        font-family: 'roboto';
+    }
+    &__subtitle{
+        font-family: monospace;
+        font-size: 1.5em;
+    }
+
+    &__p{
+        font-size: 1em;
+        font-weight: 300;
+    }
+
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+        padding-top: 2em;
+    }
+}
+
+.about-motions{
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4em 0em;
+    &__h3{
+        font-size: 3em;
+        color: $color-primario
+    }
+    &__subtitle{
+        @extend .about-mixin__subtitle;
+    }
+    &__subcontainer{
+        display: flex;
+        gap: 10px;
+    }
+    &__subcontent{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+}
+
+@media (max-width:800px) {
+    .about-mixin{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2em;
+    }
+}
+
+@media (max-width:800px) {
+    .about-motions{
+        &__subcontainer{
+            flex-direction: column;
+            gap: 2;
+        }
+
+        &__subcontent{
+            margin-top: 2em;
+            padding: 1em;
+            border-radius: 5px;
+            border: 1px solid #ff9900d9;
+        }
     }
 }
 

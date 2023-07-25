@@ -2,12 +2,16 @@
   "name": "ani-documentation",
   "version": "0.0.1",
   "description": "Documentación de la libreria en proceso de crecimiento Ani-Motion",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run sass",
-    "sass": "sass --watch scss/style.scss css/style.css"
+    "sass": "sass --watch scss/style.scss css/style.css",
+    "server": "http-server"
   },
   "author": "isidro936",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "ani-motion936": "^0.0.6"
+  }
 }

@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ani-Motion</title>
-    <link rel="shortcut icon" href="assets/Ani-Motion.favicon" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/animotion.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
     <nav class="nav">
-        <div class="nav__logo">
-            <img src="assets/img/Ani-Motion__1_-removebg-preview.png" alt="">
+        <div class="nav__logo-container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/animotion.png" alt=""> 
+            </a>
         </div>
         <ul class="nav__ul">
+            <li class="nav__li"><i class="bi bi-x"></i></li>
             <li class="nav__li"><a href="" class="nav__link nav__li--active">Home</a></li>
             <li class="nav__li"><a href="" class="nav__link">Docs</a></li>
             <li class="nav__li"><a href="" class="nav__link">Examples</a></li>
@@ -23,8 +26,12 @@
         <div class="nav__version version">
             <p class="nav__p"></p>
         </div>
+
+        <div class="nav__toggle">
+            <i class="bi bi-list-nested nav__icon"></i>
+        </div>
     </nav>
-    <heade class="header">
+    <header class="header">
         <div class="header__info">
             <div class="version">
                 <p></p>
@@ -37,31 +44,31 @@
         </div>
         <div class="header__link">
             <div class="header__buttons">
-                <a class="header__button button-primary" href="">Ir al repositorio</a>
-                <a class="header__button button-secondary" href="">Leer Documentación</a>
+                <a class="header__button button-primary" target="_blank" href="https://github.com/isidro936/Ani-Motion">Ir al repositorio</a>
+                <a class="header__button button-primary" href="">Leer Documentación</a>
             </div>
             <div class="header__link-container">
-                <a href="" class="header__icon"><i class="bi bi-youtube"></i></a>
-                <a href="" class="header__icon"><i class="bi bi-tiktok"></i></a>
+                <a href="https://www.youtube.com/channel/UCnTyr-4JK53fifOkm0upwvQ" target="_blank" class="header__icon"><i class="bi bi-youtube"></i></a>
+                <a href="http://tiktok.com/@ani__motion" target="_blank" class="header__icon"><i class="bi bi-tiktok"></i></a>
             </div>
         </div>
 
-        <div class="cube1">
+        <div class="cube1 cube">
             <p class="cube__p">Scale</p>
         </div>
 
-        <div class="cube2">
+        <div class="cube2 cube">
             <p class="cube__p">Vibrate</p>
         </div>
 
-        <div class="cube3">
+        <div class="cube3 cube">
             <p class="cube__p">Float</p>
         </div>
 
-        <div class="cube4">
+        <div class="cube4 cube">
             <p class="cube__p">Repose</p>
         </div>
-    </heade>
+    </header>
     <main class="main">
         <section class="about__sect about">
             <div class="about__icon">
@@ -69,15 +76,83 @@
             </div>
             <div class="about__text">
                 <h2 class="about__h2">Empieza como quieras</h2>
-                <p class="about__p">Puedes incluir Ani-Motion directamente en tu proyecto, debes irte a nuestro repositorio y descargar los archivos</p>
+                <p class="about__p">Puedes incluir nuestra librería por medio de <strong>npm</strong> o descargarlo directamente en nuestro repositorio en github.</p>
             </div>
             <div class="about__links">
-                <div class="about__link"></div>
-                <div class="about__link"></div>
+                <div class="about__link">
+                    <p class="about__copy">npm i ani-motion936</p><i class="bi bi-clipboard"></i>
+                </div>
+                <div class="about__link-direct">
+                    <a href="https://github.com/isidro936/Ani-Motion/blob/Dist" target="_blank" class="about__a">Descargar del repositorio<i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="about-mixin">
+            <div class="about-mixin__title">
+                <h3 class="about-mixin__h3">Ani-Mixin</h3>
+                <p class="about-mixin__subtitle">npm</p>
+                <div class="about-mixin__container">
+                    <p class="about-mixin__p">Después de descargar "Ani-Motion" desde el repositorio, simplemente exporta el archivo Sass a tu proyecto para acceder a una amplia variedad de mixins y estilos personalizables.</p>
+                    <div class="about-content">
+                        <p>@import 'node_modules/ani-motion936/dist/Ani-Mixins/ani-mixins';</p><i class="bi bi-clipboard"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="about-mixin__title">
+                <h3 class="about-mixin__h3">Ani-Mixin</h3>
+                <p class="about-mixin__subtitle">Descargado del repositorio</p>
+                <div class="about-mixin__container">
+                    <p class="about-mixin__p">Después de descargar "Ani-Motion" desde el repositorio, simplemente exporta el archivo Sass a tu proyecto para acceder a una amplia variedad de mixins y estilos personalizables.</p>
+                    <div class="about-content">
+                        <p>@import 'Ani-Motion/dist/Ani-Mixins/_Ani-Mixins.scss';</p><i class="bi bi-clipboard"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-motions">
+            <div class="about-motions__container">
+                <h3 class="about-motions__h3">Motions</h3>
+                <p class="about-motions__subtitle">npm - repositorio</p>
+                <div class="about-motions__subcontainer">
+                    <div class="about-motions__subcontent">
+                        <p class="aboot-motions__p">Archivo scss</p>
+                        <div class="about-content">
+                            <p>@import 'node_modules/ani-motion936/dist/Motions/_Motions.scss';</p><i class="bi bi-clipboard"></i>
+                        </div>
+                        <p class="aboot-motions__p">Archivo javascript</p>
+                        <div class="about-content">
+                            <p>&lt;script>node_modules/ani-motion936/dist/Motions/Motions.js&lt;script></p><i class="bi bi-clipboard"></i>
+                        </div>
+                    </div>
+                    <div class="about-motions__subcontent">
+                        <p class="aboot-motions__p">Archivo scss</p>
+                        <div class="about-content">
+                            <p>@import 'ani-motion/dist/Motions/_Motions.scss';</p><i class="bi bi-clipboard"></i>
+                        </div>
+                        <p class="aboot-motions__p">Archivo javascript</p>
+                        <div class="about-content">
+                            <p>&lt;script>ani-motion/dist/Motions/Motions.js&lt;script></p><i class="bi bi-clipboard"></i>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </section>
     </main>
-    <script src="scss/utils/Motions.js"></script>
+    <footer class="footer">
+        <div class="footer__about">
+            <img src="assets/img/ani-motionB.png" alt="Ani-Motion Logo" class="footer__logo">
+            <h2 class="footer__h2">&copy; <span id="footer__year"> </span> Ani-Motion</h2>
+        </div>
+        <div class="footer__socials">
+            <a href="https://www.youtube.com/channel/UCnTyr-4JK53fifOkm0upwvQ" target="_blank" class="header__icon"><i class="bi bi-youtube footer__icon"></i></a>
+            <a href="http://tiktok.com/@ani__motion" target="_blank" class="header__icon"><i class="bi bi-tiktok footer__icon"></i></a>
+            <a href="" class="header__icon"><i class="bi bi-instagram footer__icon"></i></a>
+        </div>
+    </footer>
+    <script src="scss/components/nav.js"></script>
+    <script src="scss/components/footer.js"></script>
+    <script src="node_modules/ani-motion936/dist/Motions/Motions.js"></script>
     <script src="scss/pages/index.js"></script>
 </body>
 </html>
