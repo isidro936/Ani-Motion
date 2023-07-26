@@ -211,3 +211,10 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+@mixin btn-scale($scale, $rotate){
+    transition: all 500ms;
+    &:hover{
+        transform: rotate($rotate) scale($scale);
+    }
+}
