@@ -3,8 +3,8 @@ export class AniIntersection {
         this._objectProp = objectProp
 
         const options = {
-        root: null, 
-        threshold: 0.1 
+            root: null, 
+            threshold: 0.10 
         };
 
         const observer = new IntersectionObserver(this.handleIntersection.bind(this), options);
@@ -40,7 +40,7 @@ export class TextChange {
     }
 
     _startTextChange() {
-        setInterval(() => {
+        this._intervalId = setInterval(() => {
         this._currentIndex = (this._currentIndex + 1) % this._objectProp.texts.length;
         this._objectProp.element.textContent = this._objectProp.texts[this._currentIndex];
         this._objectProp.element.classList.remove(this._objectProp.animation);
@@ -48,7 +48,12 @@ export class TextChange {
         this._objectProp.element.classList.add(this._objectProp.animation);
         }, this._objectProp.interval);
     }
+
+    stopTextChange() {
+        clearInterval(this._intervalId);
+    }
 }
+  
 
 export class animation{
     constructor(objectProp){

@@ -9,3 +9,12 @@ btnToggle.addEventListener('click', ()=>{
 btnClose.addEventListener('click', ()=>{
     nav.classList.remove('nav__ul--active')
 })
+
+import { animation } from "../utils/Motions.js"
+new animation({
+    element: document.querySelector('.version'),
+    animation: 'vibrate',
+    timeout: 1000,
+    event: 'click'
+    
+})

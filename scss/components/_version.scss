@@ -1,7 +1,5 @@
-$color-amarillo:#FFBD59;
-
 .version{   
-    background-color: $color-amarillo;
+    background-color:var(--color-amarillo);
     border-radius:5px ;
     padding: 0.2em 0.5em;
     color: white;

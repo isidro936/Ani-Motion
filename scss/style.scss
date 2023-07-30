@@ -1,8 +1,10 @@
 // Base
+@use 'base/var';
 @use 'base/reset';
 @use 'base/fonts';
 
 // Componentes
+@use 'components/coding-sec';
 @use 'components/buttons';
 @use 'components/nav';
 @use 'components/version';
@@ -11,6 +13,7 @@
 
 // Paginas
 @use 'pages/index';
+@use 'pages/examples';
 
 // Ani-Motion
 @use 'utils/Motions/Motions'

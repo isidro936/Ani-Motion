@@ -1,0 +1,25 @@
+:root {
+    --color-primario: #2f2f2f;
+    --color-amarillo: #FFBD59;
+    --color-azul: #0098fe;
+    --color-amarillo-intenso: #ff7c00;
+    --color-rojo: #d32f2f;
+    --color-pink: #ef5291;
+    --color-verde: #10c832;
+}
+
+.color-blue {
+    color: var(--color-azul);
+}
+
+.color-yellow {
+    color: var(--color-amarillo);
+}
+
+.color-pink {
+    color: var(--color-pink);
+}
+
+.color-green {
+    color: var(--color-verde);
+}

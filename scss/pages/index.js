@@ -1,4 +1,4 @@
-import {TextChange, animation} from './../utils/Motions.js'
+import {TextChange, AniIntersection, animation} from './../utils/Motions.js'
 const btnCopy = document.querySelectorAll('.bi-clipboard');
 
 btnCopy.forEach((btncopiar) => {
@@ -31,13 +31,6 @@ new TextChange({
     
 })
 
-new animation({
-    element: document.querySelector('.version'),
-    animation: 'vibrate',
-    timeout: 1000,
-    event: 'click'
-    
-})
 
 new animation({
     element: document.querySelector('.cube1'),
@@ -61,4 +54,16 @@ new animation({
     element: document.querySelector('.cube4'),
     animation: 'repose',
     event: 'click'
+})
+
+new AniIntersection({
+    element: document.querySelector('.about-mixin__h3'),
+    animation: 'slideY'
+})
+
+const MotionSpan = new TextChange({
+    element: document.querySelector('.about-mixin_elementP'),
+    texts:[' potencia!',' versatilidad!'],
+    animation:'fadeOff',
+    interval: 2000
 })

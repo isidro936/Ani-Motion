@@ -1,12 +1,10 @@
-@import '../utils/Motions/Motions';
-$color-amarillo:#FFBD59;
-$color-primario:#424242;
+@import '../utils/Ani-Mixins/ani-mixins';
 
 .button-primary{
-    background-color: $color-amarillo;
-    border: 2px solid $color-primario;
+    background-color: var(--color-amarillo);
+    border: 2px solid var(--color-primario);
     border-radius: 5px;
-    color: $color-primario;
+    color: var(--color-primario);
     padding: 0.5em 1em;
     font-size: 1.1em;
     font-weight: 500;
@@ -14,8 +12,50 @@ $color-primario:#424242;
     @include btn-scale(1.2, -5deg);
 }
 
+.button-secondary{
+    width: 10vw;
+    background: none;
+    color: white;
+    border: none;
+    padding: 0.2em;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button-secondary--active{
+    width: 10vw;
+    background-color: white ;
+    border-radius: 50px;
+    border: none;
+    color: var(--color-amarillo);
+    padding: 0.2em;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 100ms;
+}
+
+.button-submit{
+    background-color: rgb(0, 153, 255);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 0em 2em;
+    font-weight: 500;
+    transition: all 500ms;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
 @media (max-width:900px) {
-    .button-primary{
+    .button-primary,.button-secondary{
         font-size: 0.9em;
+    }
+
+    .button-secondary{
+        width: 90%;
     }
 }

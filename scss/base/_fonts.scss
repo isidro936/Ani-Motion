@@ -4,16 +4,17 @@
     font-family: 'Poppins';
 }
 
-:root{
-    --color-primario:#424242;
-}
-
 h1,h2,h3,h4,h5,h6, span{
     font-family: 'system-ui';
     color: inherit;
 }
 
 P{
+    font-family: inherit;
+    color: inherit;
+}
+
+span{
     font-family: inherit;
     color: inherit;
 }

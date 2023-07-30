@@ -1,0 +1,127 @@
+.main-docs{
+    height: calc(100vh - 4em);
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.aside-docs{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    border-right: 1px solid #0000002a;
+
+    &__list{
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    &__item{
+        padding: 0.3em;
+        color: var(--color-primario);
+        margin-left: 1.5em;
+        border-radius: 5px;
+        &:hover{
+            background-color: #FFBD5950;
+            color: var(--color-amarillo-intenso);
+            cursor: pointer;
+        }
+    }
+
+    &__item-primary{
+        background-color: #FFBD5950;
+        color: var(--color-amarillo-intenso);
+        padding: 0.3em 1em;
+        border-radius: 5px;
+    }
+}
+
+.header-docs{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    &__container{
+        width: 90%;
+        height: 70%;
+        border: 2px solid var(--color-amarillo);
+        border-radius: 10px;
+        box-shadow: 0 0 5px #00000050;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4em;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__element{
+        background:linear-gradient(to left, #f33b1297, #ffaa00d0);
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+    &__buttons{
+        background-color: var(--color-amarillo);
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        padding: 0.3em;
+        border-radius: 50px;
+    }
+
+    &__form{
+        display: none;
+        gap: 1em;
+        
+    }
+
+    &__form--active{
+        display: flex;
+        justify-content: center;
+        flex-flow: wrap;
+        width: 90%;
+    }
+
+    &__inputs{
+        width: 20%;
+        border: none;
+        outline: none;
+        background-color: var(--color-amarillo);
+        padding: 0.5em 1em;
+        font-family: 'Poppins';
+        border-radius: 5px;
+        color: white;
+        &::placeholder{
+            color: inherit;
+        }
+    }
+
+    &__inputs--active{
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+}
+
+@media(max-width:800px){
+    .main-docs{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .header-docs{
+        &__buttons{
+            width: 60%;
+        }
+
+        &__inputs{
+            width: 30%;
+        }
+    }
+}

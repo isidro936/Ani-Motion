@@ -15,6 +15,7 @@ img, picture, video{
 a{
     text-decoration: none;
     color: inherit;
+    font-family: inherit;
 }
 
 ul, ol{
@@ -51,4 +52,10 @@ body{
 
 ::-moz-scrollbar-thumb:hover {
     background-color: $color-primario;
+}
+
+.d-flex{
+    width: 100%;
+    display: flex;
+    gap: 1em;
 }

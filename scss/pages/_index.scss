@@ -1,7 +1,5 @@
 @import '../utils/Ani-Mixins/ani-mixins';
-@import '../utils/Motions/Motions';
-$color-primario:#424242;;
-$color-amarillo:#FFBD59;
+
 
 
 .header{
@@ -26,12 +24,12 @@ $color-amarillo:#FFBD59;
     }
     &__p-welcome{
         font-size: 1.2em;
-        color: $color-primario;
+        color: var(--color-primario);
         
     }
     &__h1{
         font-size: 4em;
-        color: $color-primario;
+        color: var(--color-primario);
     }
     &__h3{
         font-weight: 500;
@@ -100,7 +98,7 @@ $color-amarillo:#FFBD59;
     width: 70px;
     height: 30px;
     border-radius: 5px;
-    background-color: $color-amarillo;
+    background-color: var(--color-amarillo);
     position: absolute;
     right: 10em;
     top: 20%;
@@ -114,7 +112,7 @@ $color-amarillo:#FFBD59;
     width: 70px;
     height: 30px;
     border-radius: 5px;
-    background-color: $color-amarillo;
+    background-color: var(--color-amarillo);
     position: absolute;
     right: 8em;
     top: 50%;
@@ -128,7 +126,7 @@ $color-amarillo:#FFBD59;
     width: 70px;
     height: 30px;
     border-radius: 5px;
-    background-color: $color-amarillo;
+    background-color: var(--color-amarillo);
     position: absolute;
     left: 10em;
     top: 20%;
@@ -142,7 +140,7 @@ $color-amarillo:#FFBD59;
     width: 70px;
     height: 30px;
     border-radius: 5px;
-    background-color: $color-amarillo;
+    background-color: var(--color-amarillo);
     position: absolute;
     left: 16em;
     top: 60%;
@@ -152,6 +150,9 @@ $color-amarillo:#FFBD59;
     @include scale(1s, .1s, both,ease)
 }
 
+.cube{
+    cursor: pointer;
+}
 @media (max-width:800px) {
     .cube{
         display: none;
@@ -174,7 +175,7 @@ $color-amarillo:#FFBD59;
     justify-content: center;
     align-items: center;
     padding: 3em 0em;
-    color: $color-primario;
+    color: var(--color-primario);
     &__icon{
         padding:2em 1.5em;
         background-color: #FFBD5970;
@@ -184,8 +185,8 @@ $color-amarillo:#FFBD59;
     &__span{
         font-size: 4em;
         font-weight: 700;
-        color: #ff9900;
-        line-height: 0.5em;
+        color: var(--color-amarillo-intenso);
+        line-height: 1em;
     }
 
     &__text{
@@ -232,7 +233,7 @@ $color-amarillo:#FFBD59;
     }
 
     &__a{
-        color: rgb(0, 110, 255);
+        color: var(--color-azul);
         font-size: 1.2em; 
     }
 }
@@ -257,17 +258,29 @@ $color-amarillo:#FFBD59;
 }
 
 .about-mixin{
-    width: 100vw;
+    color: var(--color-primario);
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    flex-flow: row wrap;
-    padding: 2em;
-    gap: 010px;
-    color: $color-primario;
-    text-align: center;
+    grid-template-columns: 60% 40%;
+    padding: 1em;
+    &__container{
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    &__title{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 5px;
+    }
     &__h3{
-        font-size: 2em;
+        font-size: 3em;
         font-family: 'roboto';
+        
     }
     &__subtitle{
         font-family: monospace;
@@ -279,60 +292,69 @@ $color-amarillo:#FFBD59;
         font-weight: 300;
     }
 
+}
 
-    &__container{
+.icons-colorYellow{
+    color: var(--color-amarillo-intenso);
+    font-size: 0.9em;
+}
+
+.about-mixinDownload{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    padding: 2em;
+    color: var(--color-primario);
+
+    &__content{
+        padding: 1em;
         display: flex;
+        justify-content: center;
         flex-direction: column;
-        gap: 3em;
-        padding-top: 2em;
+        gap: 1em;
+    }
+
+    &__subcontent{
+        @extend .about-mixinDownload__content;
+        text-align: end;
+    }
+
+    &__title{
+        
+        font-size: 2em;
     }
 }
 
-.about-motions{
-    min-height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 4em 0em;
-    &__h3{
+.about-motion{
+    padding: 2em;
+    color: var(--color-primario);
+    display: grid;
+    grid-template-columns: 60% 30%;
+
+    &__title{
+        font-family: 'roboto';
         font-size: 3em;
-        color: $color-primario
     }
-    &__subtitle{
-        @extend .about-mixin__subtitle;
-    }
-    &__subcontainer{
-        display: flex;
-        gap: 10px;
-    }
+
     &__subcontent{
-        display: flex;
-        flex-direction: column;
-        gap: 0.5em;
+        padding: 1em;
     }
 }
 
 @media (max-width:800px) {
     .about-mixin{
         grid-template-columns: repeat(1, 1fr);
-        gap: 2em;
+        gap: 1em;
+        &__h3{
+            font-size: 2em;
+        }
+
+        &__container{
+            text-align: justify;
+        }
     }
-}
 
-@media (max-width:800px) {
-    .about-motions{
-        &__subcontainer{
-            flex-direction: column;
-            gap: 2;
-        }
-
-        &__subcontent{
-            margin-top: 2em;
-            padding: 1em;
-            border-radius: 5px;
-            border: 1px solid #ff9900d9;
-        }
+    .about-mixinDownload{
+        grid-template-columns: repeat(1,1fr);
     }
 }
 

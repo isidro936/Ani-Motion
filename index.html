@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ani-Motion</title>
+    <!-- favicon -->
     <link rel="shortcut icon" href="assets/animotion.png" type="image/x-icon">
+    <!-- Estilos -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- iconos Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
@@ -17,9 +20,9 @@
         </div>
         <ul class="nav__ul">
             <li class="nav__li"><i class="bi bi-x"></i></li>
-            <li class="nav__li"><a href="" class="nav__link nav__li--active">Home</a></li>
-            <li class="nav__li"><a href="" class="nav__link">Docs</a></li>
-            <li class="nav__li"><a href="" class="nav__link">Examples</a></li>
+            <li class="nav__li"><a href="index.html" class="nav__link nav__li--active">Home</a></li>
+            <li class="nav__li"><a href="docs.html" class="nav__link">Docs</a></li>
+            <li class="nav__li"><a href="examples.html" class="nav__link">Examples</a></li>
             <li class="nav__li"><a href="" class="nav__link">About</a></li>
         </ul>
 
@@ -40,7 +43,7 @@
         </div>
         <div class="header__welcome">
             <h1 class="header__h1">Bienvenido a Ani-Motion</h1>
-            <p class="header__p-welcome">Descubre Ani-Motion: La librería web para animaciones impresionantes. Da vida a tu sitio con efectos cautivadores y movimientos dinámicos. <br> ¡Potencia tu creatividad hoy!</p>
+            <p class="header__p-welcome">Descubre la librería web para animaciones impresionantes. Da vida a tu sitio con efectos cautivadores y movimientos dinámicos. <br> ¡Potencia tu creatividad ahora!</p>
         </div>
         <div class="header__link">
             <div class="header__buttons">
@@ -88,53 +91,92 @@
             </div>
         </section>
         <section class="about-mixin">
-            <div class="about-mixin__title">
-                <h3 class="about-mixin__h3">Ani-Mixin</h3>
-                <p class="about-mixin__subtitle">npm</p>
-                <div class="about-mixin__container">
-                    <p class="about-mixin__p">Después de descargar "Ani-Motion" desde el repositorio, simplemente exporta el archivo Sass a tu proyecto para acceder a una amplia variedad de mixins y estilos personalizables.</p>
-                    <div class="about-content">
-                        <p>@import 'node_modules/ani-motion936/dist/Ani-Mixins/ani-mixins';</p><i class="bi bi-clipboard"></i>
-                    </div>
+            <div class="about-mixin__container">
+                <div class="about-mixin__title">
+                    <h3 class="about-mixin__h3">Ani-Mixins <i class="bi bi-puzzle-fill icons-colorYellow"></i></h3>          
+                    <p class="about-mixin__subtitle">Da vida a tus diseños con animaciones personalizadas</p>
+                </div>
+                <div class="about-mixin__subcontainer">
+                    <p class="about-mixin__p">Descubre el poder creativo de nuestras animaciones personalizables. Los Ani-Mixins son herramientas poderosas que te permiten combinar y ajustar efectos, logrando animaciones únicas para tu sitio web.</p>         
                 </div>
             </div>
-            <div class="about-mixin__title">
-                <h3 class="about-mixin__h3">Ani-Mixin</h3>
-                <p class="about-mixin__subtitle">Descargado del repositorio</p>
-                <div class="about-mixin__container">
-                    <p class="about-mixin__p">Después de descargar "Ani-Motion" desde el repositorio, simplemente exporta el archivo Sass a tu proyecto para acceder a una amplia variedad de mixins y estilos personalizables.</p>
-                    <div class="about-content">
-                        <p>@import 'Ani-Motion/dist/Ani-Mixins/_Ani-Mixins.scss';</p><i class="bi bi-clipboard"></i>
-                    </div>
+            <div class="coding-sec">
+                <p>//Archivo del repositorio</p>
+                <p class="color-pink">@import <span class="color-green">'Ani-Motion/Ani-Mixins/ani-mixins'</span>;</p>
+                <br>
+                <p class="color-yellow">.h3{<br>
+                    <span class="color-blue space-tab">font-size:2em;</span><br>
+                    <span class="color-blue space-tab">font-family:<span class="color-green">'Roboto'</span>;</span><br>
+                    <span class="color-pink space-tab">@include <span class="color-blue">slideY(1s, 0s, ease,both, 50px)</span>;</span>
+                <br>}</p> 
+            </div>           
+        </section>
+        <section class="about-mixinDownload">
+            <div class="about-mixinDownload__content">
+                <h3 class="about-mixinDownload__title">Incluye todo el sass de ani-mixin</h3>
+                <p class="about-mixin__p">Descargalo desde el repositorio e importalo a tu archivo sass.</p>
+                <div class="about-content">
+                    <p class="color-pink">@import <span class="color-green">'./Ani-Motion/Ani-Mixins/ani-mixins'</span>;</p><i class="bi bi-clipboard"></i>
+                </div>
+            </div>
+            <div class="about-mixinDownload__content">
+                <p class="about-mixin__p">También puedes descargarlo desde npm e importarlo de la misma manera, aunque cambia un poco la ruta de archivos.</p>
+                <div class="about-content">
+                    <p class="color-pink">@import <span class="color-green">'./node_modules/ani-motion936/Ani-Mixins/ani-mixins'</span>;</p><i class="bi bi-clipboard"></i>
                 </div>
             </div>
         </section>
-        <section class="about-motions">
-            <div class="about-motions__container">
-                <h3 class="about-motions__h3">Motions</h3>
-                <p class="about-motions__subtitle">npm - repositorio</p>
-                <div class="about-motions__subcontainer">
-                    <div class="about-motions__subcontent">
-                        <p class="aboot-motions__p">Archivo scss</p>
-                        <div class="about-content">
-                            <p>@import 'node_modules/ani-motion936/dist/Motions/_Motions.scss';</p><i class="bi bi-clipboard"></i>
-                        </div>
-                        <p class="aboot-motions__p">Archivo javascript</p>
-                        <div class="about-content">
-                            <p>&lt;script>node_modules/ani-motion936/dist/Motions/Motions.js&lt;script></p><i class="bi bi-clipboard"></i>
-                        </div>
+        <section class="about-mixin">
+            <div class="about-mixin__container">
+                <div class="about-motion__content">
+                    <h3 class="about-motion__title">Motions <i class="bi bi-film icons-colorYellow"></i></h3>
+                    <div class="d-flex">
+                        <span class="about-mixin__subtitle">¡Descubre su </span><p class="about-mixin_elementP"></p>
                     </div>
-                    <div class="about-motions__subcontent">
-                        <p class="aboot-motions__p">Archivo scss</p>
-                        <div class="about-content">
-                            <p>@import 'ani-motion/dist/Motions/_Motions.scss';</p><i class="bi bi-clipboard"></i>
-                        </div>
-                        <p class="aboot-motions__p">Archivo javascript</p>
-                        <div class="about-content">
-                            <p>&lt;script>ani-motion/dist/Motions/Motions.js&lt;script></p><i class="bi bi-clipboard"></i>
-                        </div>
-                    </div>
-                    
+                </div>
+                <div class="about-motion__subcontainer">
+                    <p class="about-mixin__p">Es una librería de animaciones web que va más allá de los simples mixins. Con "Motions", podrás aplicar efectos y animaciones sorprendentes en tus diseños mediante clases CSS y JS, aprovecha nuestra amplia colección de animaciones personalizables y lleva tus proyectos a un nivel superior.</p>
+                </div>
+            </div>
+            <div class="coding-sec">
+                <p>//Archivo JS del repositorio</p>
+                <p class="color-pink">import <span class="color-yellow">{TextGhange}</span> from <span class="color-green">'./Ani-Motion/Motions/'</span></p>
+                <p class="color-pink">const element = <span class="color-green">document.querySelector('.about-mixin__p')</span></p>
+                <br>
+                <p class="color-pink">new <span class="color-blue">TextChange</span>({<br>
+                    <span class="space-tab">element: <span class="color-yellow">element</span>,</span><br>
+                    <span class="space-tab">texts:<span class="color-green">['potencia!','versatilidad!']</span>,</span><br>
+                    <span class="space-tab">animation:<span class="color-green">'fadeOff'</span></span>
+                <br>})</p> 
+            </div>
+        </section>
+        <section class="about-mixinDownload">
+            <div class="about-mixinDownload__content">
+                <h3 class="about-mixinDownload__title">incluye el archivo JS en tu proyecto.</h3>
+                <p class="about-mixin__p">Archivo descargado del repositorio</p>
+                <div class="about-content">
+                    <p class="color-pink">import <span class="color-yellow"> {TextChange, AniIntersection, animation} </span> from <span class="color-green">'ani-motion936/Motions.js'</span></p><i class="bi bi-clipboard"></i>
+                </div>
+                <p class="about-mixin__p">Archivo descargado desde npm</p>
+                <div class="about-content">
+                    <p class="color-pink">import <span class="color-yellow"> {TextChange, AniIntersection, animation} </span> from <span class="color-green">'./node_modules/ani-motion936/Motions.js'</span></p><i class="bi bi-clipboard"></i>
+                </div>
+            </div>
+            <div class="about-mixinDownload__subcontent">
+                <h3 class="about-mixinDownload__title">Usa el que necesites</h3>
+                <p class="about-mixin__p">Archivos descargados del repositorio</p>
+                <div class="about-content">
+                    <p class="color-pink">@import <span class="color-green">'./ani-motion936/Motions/Motions.scss'</span>;</p><i class="bi bi-clipboard"></i>
+                </div>
+                <div class="about-content">
+                    <p class="color-pink">&lt;link <span class="color-blue">rel="stylesheet" href="./ani-motion936/Motions/Motions.css"</span>&gt;</p><i class="bi bi-clipboard"></i>
+                </div>
+                <p class="about-mixin__p">Archivos descargados desde npm</p>
+                <div class="about-content">
+                    <p class="color-pink">@import <span class="color-green">'./node_modules/ani-motion936/Motions/Motions.scss'</span>;</p><i class="bi bi-clipboard"></i>
+                </div>
+                <div class="about-content">
+                    <p class="color-pink">&lt;link <span class="color-blue">rel="stylesheet" href="./node_modules/ani-motion936/Motions/Motions.css"</span>&gt;</p><i class="bi bi-clipboard"></i>
                 </div>
             </div>
         </section>
@@ -150,7 +192,7 @@
             <a href="" class="header__icon"><i class="bi bi-instagram footer__icon"></i></a>
         </div>
     </footer>
-    <script src="scss/components/nav.js"></script>
+    <script type="module" src="scss/components/nav.js"></script>
     <script src="scss/components/footer.js"></script>
     <script type="module" src="scss/pages/index.js"></script>
 
