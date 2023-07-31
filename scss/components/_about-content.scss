@@ -1,13 +1,18 @@
 .about-content{
-    width: 100%;
     background-color: #f8f9fa;
     border: 1px solid #d4d4d47a;
     border-radius: 5px;
     padding: 0.5em 1em;
     font-family:monospace;
     font-size: 1.3em;
+    min-width: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: start;
+}
+
+.about-content p {
+    max-width: 100%;
+    overflow-wrap: break-word; /* Esto evita que el texto largo sobrepase los límites del contenedor */
 }
