@@ -9,7 +9,7 @@ Ani-Motion es una librería de animaciones y efectos para desarrolladores web qu
 
 # Cómo Instalar Ani-Motion
 
-Puedes integrar Ani-Motion en tu proyecto de dos formas: descargando directamente desde el repositorio o instalándolo mediante npm
+Puedes integrar Ani-Motion en tu proyecto de dos formas: descargando directamente desde el repositorio en la rama Dist o instalándolo mediante npm
 
 ## Instalación desde este Repositorio
 
