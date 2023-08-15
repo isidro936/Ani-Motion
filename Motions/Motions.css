@@ -181,4 +181,75 @@
   animation: repose 5s ease infinite;
 }
 
+.reboundTop {
+  animation: rebound 2s ease;
+}
+
+@keyframes rebound {
+  0% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(35px);
+  }
+  60% {
+    transform: translateY(-20px);
+  }
+  75% {
+    transform: translateY(12px);
+  }
+  90% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(2px);
+  }
+}
+.roll {
+  animation: roll 2s ease;
+}
+
+@keyframes roll {
+  0% {
+    transform: translateX(100px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+.rollLeft {
+  position: absolute;
+  left: 0;
+  animation: rollLeft 2s ease;
+}
+@keyframes rollLeft {
+  0% {
+    transform: translateX(-100%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+.rollRight {
+  position: absolute;
+  right: 0;
+  animation: rollRight 2s ease;
+}
+@keyframes rollRight {
+  0% {
+    transform: translateX(100%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+.btn-scale {
+  transition: all 500ms;
+}
+.btn-scale:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
 /*# sourceMappingURL=Motions.css.map */

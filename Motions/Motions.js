@@ -83,3 +83,22 @@ export class animation{
         this._addAnimation()
     } 
 }
+
+//todas las animaciones disponibles
+export const animations = {
+    slideY:'slideY',
+    slideX: "SlideX",
+    fadeOff: "fadeOff",
+    rotate360: "rotate360",
+    spiral: "spiral",
+    float: "float",
+    scaleReverse: "scaleReverse",
+    scale: "scale",
+    reboundTop: "reboundTop",
+    vibrate: "vibrate",
+    repose: "repose",
+    roll: "roll",
+    rollLeft:"rollLeft",
+    rollRight: "rollRight",
+    btnScale: "btn-scale"  //para botones
+};
