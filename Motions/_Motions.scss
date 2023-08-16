@@ -287,3 +287,23 @@
         transform: rotate(10deg) scale(1.1);
     }
 }
+
+.entrance{
+    animation: entrance 3s 0s ease forwards;
+}
+
+@keyframes entrance {
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.exit{
+    animation: entrance 1s ease forwards reverse;
+}
+

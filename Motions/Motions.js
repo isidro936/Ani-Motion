@@ -4,7 +4,7 @@ export class AniIntersection {
 
         const options = {
         root: null, 
-        threshold: 0.1 
+        threshold: this._objectProp.limitView
         };
 
         const observer = new IntersectionObserver(this.handleIntersection.bind(this), options);
@@ -100,5 +100,7 @@ export const animations = {
     roll: "roll",
     rollLeft:"rollLeft",
     rollRight: "rollRight",
-    btnScale: "btn-scale"  //para botones
+    btnScale: "btn-scale",  //para botones
+    entrance:'entrance',
+    exit: 'exit',
 };
