@@ -4,7 +4,7 @@
   "description": "Animation library",
   "main": "style.scss",
   "scripts": {
-    "test": "start",
+    "start": "npm run sass",
     "sass": "sass --watch style.scss css/style.css"
   },
   "author": "Isidro936",
@@ -20,6 +20,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "ani-motion936": "^0.0.8"
+    "ani-motion936": "^0.0.9"
   }
 }

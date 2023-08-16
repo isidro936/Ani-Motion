@@ -16,6 +16,7 @@ body{
     align-items: center;
     gap: 2em;
     overflow-x: hidden;
+    flex-direction: column;
 }
 div{
     box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.18);
@@ -23,4 +24,11 @@ div{
     width: 200px;
     height: 200px;
     border-radius: 50%;
+}
+
+#miTexto{
+    font-size: 3em;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #ff7559;
 }

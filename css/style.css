@@ -171,10 +171,10 @@
 
 @keyframes repose {
   0%, 100% {
-    scale: 1;
+    scale: 0.8;
   }
   50% {
-    scale: 0.8;
+    scale: 1;
   }
 }
 .repose {
@@ -252,6 +252,24 @@
   transform: rotate(10deg) scale(1.1);
 }
 
+.entrance {
+  animation: entrance 3s 0s ease forwards;
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.exit {
+  animation: entrance 1s ease forwards reverse;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -268,6 +286,7 @@ body {
   align-items: center;
   gap: 2em;
   overflow-x: hidden;
+  flex-direction: column;
 }
 
 div {
@@ -276,6 +295,13 @@ div {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+}
+
+#miTexto {
+  font-size: 3em;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #ff7559;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,6 @@
-# Ani-Motion v0.8 Beta
+# Ani-Motion v0.9 Beta
 
-[![Version](https://img.shields.io/badge/versión-0.8-blue)](https://github.com/isidro936/Ani-Motion)
+[![Version](https://img.shields.io/badge/versión-0.9-blue)](https://github.com/isidro936/Ani-Motion)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
 
 ## Descripción
@@ -9,9 +9,11 @@ Ani-Motion es una librería de animaciones y efectos para desarrolladores web qu
 
 # Cómo Instalar Ani-Motion
 
-Puedes integrar Ani-Motion en tu proyecto de dos formas: descargando directamente desde el repositorio o instalándolo mediante npm
+Puedes integrar Ani-Motion en tu proyecto de dos formas: descargando directamente desde el repositorio en la rama Dist o instalándolo mediante npm
 
 ## Instalación desde este Repositorio
+
+* Dirigete a la rama Dist del repositorio
 
 * Haz clic en el botón "Code" y selecciona "Download ZIP" para descargar el archivo ZIP del repositorio.
 
@@ -24,11 +26,13 @@ Puedes integrar Ani-Motion en tu proyecto de dos formas: descargando directament
 
 * Ejecuta el siguiente comando para instalar Ani-Motion a través de npm:  
 
+```sh
     npm install ani-motion936
+```
 
 # Ani-Mixins
 
-Además de las animaciones y efectos predefinidos, "Ani-Motion" introduce los "Ani-Mixins": Mixins de sass personalizables.
+"Ani-Motion" introduce los "Ani-Mixins": Mixins de sass personalizables.
 
 ### Instalación
 Para empezar a utilizar Ani-Motion, simplemente incluye el archivo sass en tu proyecto y luego importalo al archivo sass que vayas a usar:
@@ -78,6 +82,7 @@ Es la librería más grande de este conjunto que fusiona las animaciones de los 
 Para empezar a utilizar **Motion**, simplemente incluye los archivos Sass y JavaScript en tu proyecto:
 
 1. Descarga los archivos de la librería.
+
 2. Importa el archivo Sass en tu proyecto principal:
 
 ```scss
@@ -95,40 +100,35 @@ o puedes incluirlo directamente en el HTML, aunque para algunos efectos de texto
 
 ## Uso
 
-Con Ani-Motions de Sass, puedes aplicar animaciones personalizadas a tus elementos HTML con solo unas pocas líneas de código. Aquí tienes un ejemplo básico de cómo usar un Motions para animar un elemento:
+Con Motions, puedes aplicar animaciones personalizadas a tus elementos HTML con solo unas pocas líneas de código. Aquí tienes un ejemplo básico de cómo usar un Motions para animar un elemento:
 
 ```html
-<!-- Debes incluir los estilos de las animaciones-->
-<link rel="stylesheet" href="ani-motion936/Motions/Motions.css">
-
 <div class="animated-element">¡Hola, Ani-Motion!</div>
 ```
 
-O si quieres, puedes utilizar nuestro archivo sass:
-
-```scss
-    @use 'ani-motion936/Motions/Motions'
-```
 En tu archivo javascript:
 
 ```javascript
+const tuElemento = document.querySelector('.animated-element')
+
 new animation({
-    element: document.querySelector('tuElemento'),
-    animation: 'vibrate',//elige tu animacion de preferencia
+    element: tuElemento,
+    animation: animations.slideY,//elige tu animacion de preferencia
     timeout: 1000,//el timeout es opcional, sirve para reiniciar la animación
-    event: 'click'//eventos disponibles:hover y click
+    event: 'click'//eventos de javascript para enpezar la animacion
     
 })
 ```
 Otro caso de uso seria para un efecto de texto cambiante:
 
 ```javascript
+const h1 = document.querySelector('.title')
+
 new TextChange({
-    element: document.querySelector('.header__span'),
+    element: h1,
     texts:['Mixins','Motions','Effects'],//textos sin limite
-    animation:'slideY',
+    animation:animations.scale,
     interval: 3000,//tiempo de cambio
-    
 })
 ```
 # Contribución
