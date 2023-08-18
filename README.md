@@ -27,7 +27,7 @@ Puedes integrar Ani-Motion en tu proyecto de dos formas: descargando directament
 * Ejecuta el siguiente comando para instalar Ani-Motion a través de npm:  
 
 ```sh
-    npm install ani-motion936
+npm install ani-motion936
 ```
 
 # Ani-Mixins
