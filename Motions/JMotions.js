@@ -85,7 +85,7 @@ export class animation{
 }
 
 //todas las animaciones disponibles
-export const animations = {
+export const aniObjects = {
     slideY:'slideY',
     slideX: "SlideX",
     fadeOff: "fadeOff",
@@ -103,4 +103,4 @@ export const animations = {
     btnScale: "btn-scale",  //para botones
     entrance:'entrance',
     exit: 'exit',
-};
+}

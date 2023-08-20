@@ -1,0 +1,103 @@
+:root{
+    --transition:all 500ms;
+}
+
+.btn-scale{
+    transition: var(--transition);
+    &:hover{
+        transform: rotate(10deg) scale(1.1);
+    }
+}
+
+@mixin btn-scale($rotate, $scale){
+    transition: var(--transition);
+    &:hover{
+        transform: rotate($rotate) scale($scale);
+    }
+}
+
+.btn-shadow{
+    transition: var(--transition);
+
+    &:hover{
+        transform: translate(10px, -10px);
+        box-shadow: -10px 10px black;
+    }
+}
+
+@mixin btn-shadow($traslateX, $color){
+    transition: var(--transition);
+    &:hover{
+        transform: translate(10px, -$traslateX);
+        box-shadow: -10px $traslateX $color;
+    }
+}
+
+.btn-loading {   
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+    &:hover::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        animation: loadingAnimation 1s both ;
+    }
+}
+
+@keyframes loadingAnimation {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@mixin btn-loading($color, $time, $border-radius){
+    overflow: hidden;
+    position: relative;
+    &:after{
+        content: '';
+        border-radius: $border-radius;
+        position: absolute;
+        top: 0;
+        left: -$border-radius;
+        width: 0;
+        height: 100%;
+        background-color: $color;
+        transition: width $time ease;
+    }
+    
+    &:hover::after {
+        width: calc(100% + $border-radius + 50px);
+    }
+}
+
+.Jbtn-loading{
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        animation: loadingAnimation 1s both ;
+    }
+}
+
+@mixin btn-light($color){
+    transition: var(--transition);
+    &:hover{
+        box-shadow: 0px 0px 10px $color;
+    }
+}
