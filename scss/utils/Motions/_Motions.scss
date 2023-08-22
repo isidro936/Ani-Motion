@@ -52,7 +52,7 @@
 @keyframes slideX{
     from{
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(-100px);
     }
     to{
         opacity: 1;

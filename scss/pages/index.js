@@ -1,4 +1,4 @@
-import {TextChange, AniIntersection, animation} from './../utils/Motions.js'
+import {TextChange, AniIntersection, animation} from '../utils/Motions.js'
 const btnCopy = document.querySelectorAll('.bi-clipboard');
 
 btnCopy.forEach((btncopiar) => {
@@ -61,7 +61,7 @@ new AniIntersection({
     animation: 'slideY'
 })
 
-const MotionSpan = new TextChange({
+new TextChange({
     element: document.querySelector('.about-mixin_elementP'),
     texts:[' potencia!',' versatilidad!'],
     animation:'fadeOff',

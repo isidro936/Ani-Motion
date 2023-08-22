@@ -1,0 +1,130 @@
+.header-about{
+    min-height: calc(100vh - 4em);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:2em 5em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.131);
+
+    &__content-top{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__subtitle{
+        font-weight: 700;
+        font-size: 1.2em;
+        color: var(--color-azul);
+    }
+
+    &__img{
+        width: 50px;
+        position: absolute;
+        left: -50px;
+        bottom: 1em;
+    }
+
+    &__title{
+        font-size: 7em;
+        color: var(--color-primario);
+    }
+
+    &__subcontent{
+        width: 100%;
+        font-weight: 700;
+    }
+
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    &__h3{
+        font-size: 1.5em;
+        color: var(--color-amarillo-intenso);
+    }
+    &__subp{
+        font-size: 0.9em;
+    }
+}
+
+.main-section{
+    min-height: calc(100vh - 4em);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.131);
+    padding: 0 5em;
+
+    &__content{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    &__subcontent{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title{
+        font-weight: 900;
+        font-size: 2em;
+    }
+
+    &__subtitle{
+        font-size: 1em;
+    }
+
+    &__img{
+        transform: rotate(10deg);
+        width: 400px;
+    }
+
+    &__icon{
+        font-size: 15em;
+        animation: iconRoll 10s infinite ease;
+    }
+
+    &__span{
+        color: var(--color-amarillo-intenso);
+        font-size: 0.3em;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        text-align: center;
+    }
+}
+
+.main-subsection{
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__span{
+        color: var(--color-azul);
+        font-weight: 700;
+    }
+}
+
+@keyframes iconRoll {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}

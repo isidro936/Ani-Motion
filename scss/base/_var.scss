@@ -1,6 +1,7 @@
 :root {
-    --color-primario: #2f2f2f;
+    --color-primario: #191919;
     --color-amarillo: #FFBD59;
+    --color-amarillo-degradado: #ffbd5974;
     --color-azul: #0098fe;
     --color-amarillo-intenso: #ff7c00;
     --color-rojo: #d32f2f;
@@ -14,6 +15,10 @@
 
 .color-yellow {
     color: var(--color-amarillo);
+}
+
+.color-orange {
+    color: var(--color-amarillo-intenso);
 }
 
 .color-pink {

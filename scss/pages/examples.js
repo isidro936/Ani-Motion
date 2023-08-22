@@ -1,5 +1,4 @@
 import { TextChange } from '../utils/Motions.js';
-
 const headerContent = document.querySelector('.header-docs__container');
 const element = document.querySelector('.header-docs__element');
 const elementh1 = document.querySelector('.header-docs__h1');
