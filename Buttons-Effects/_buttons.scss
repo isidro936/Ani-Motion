@@ -9,6 +9,11 @@
     }
 }
 
+.Jbtn-scale{
+    transition: var(--transition);
+    transform: rotate(10deg) scale(1.1);
+}
+
 @mixin btn-scale($rotate, $scale){
     transition: var(--transition);
     &:hover{
@@ -23,6 +28,12 @@
         transform: translate(10px, -10px);
         box-shadow: -10px 10px black;
     }
+}
+
+.Jbtn-shadow{
+    transition: var(--transition);
+    transform: translate(10px, -10px);
+    box-shadow: -10px 10px black;
 }
 
 @mixin btn-shadow($traslateX, $color){

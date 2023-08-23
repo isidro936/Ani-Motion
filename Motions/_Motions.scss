@@ -199,20 +199,6 @@
     animation: repose 5s ease infinite;
 }
 
-@mixin parallaX{
-    background-size:cover ;
-    background-position: center;
-    background-attachment: fixed;
-    z-index: -1;
-}
-
-@mixin textImg{
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-
 .reboundTop{
     animation: rebound 2s ease;
 }

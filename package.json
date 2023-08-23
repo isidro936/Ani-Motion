@@ -1,11 +1,11 @@
 {
   "name": "ani-motion936",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Animation library",
   "main": "Ani-Motion",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "echo > test.js -y && echo > test.html -y && echo > style.scss -y && npm run sass",
+    "start": "echo > test.js && echo > test.html && echo > style.scss && npm run sass && sass --watch style.scss style.css",
     "sass": "sass Motions/_Motions.scss Motions/Motions.css && sass Buttons-Effects/_buttons.scss Buttons-Effects/buttons-class.css",
     "Motions":"sass --watch Motion/_Motions.scss Motions/Motions.css",
     "buttons": "sass --watch Buttons-Effects/_buttons.scss Buttons-Effects/buttons-class.css"
