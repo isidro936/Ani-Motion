@@ -1,0 +1,17 @@
+@mixin parallaX{
+    background-size:cover ;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+@mixin textImg{
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin zoom-image($time, $time-line) {
+    transform: scale(1);
+    transition: transform $time $time-line;
+}

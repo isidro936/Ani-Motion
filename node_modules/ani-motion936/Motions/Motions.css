@@ -245,13 +245,6 @@
   }
 }
 
-.btn-scale {
-  transition: all 500ms;
-}
-.btn-scale:hover {
-  transform: rotate(10deg) scale(1.1);
-}
-
 .entrance {
   animation: entrance 3s 0s ease forwards;
 }

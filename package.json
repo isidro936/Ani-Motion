@@ -20,6 +20,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "ani-motion936": "^0.0.9"
+    "ani-motion936": "^0.1.1"
   }
 }

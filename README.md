@@ -1,11 +1,11 @@
-# Ani-Motion v0.9 Beta
+# Ani-Motion936 v1.1
 
-[![Version](https://img.shields.io/badge/versión-0.9-blue)](https://github.com/isidro936/Ani-Motion)
+[![Version](https://img.shields.io/badge/versión-1.1-blue)](https://github.com/isidro936/Ani-Motion)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
 
 ## Descripción
 
-Ani-Motion es una librería de animaciones y efectos para desarrolladores web que desean agregar interactividad y atractivo visual a sus páginas web. Con Ani-Motion, puedes crear animaciones complejas y efectos de transición de manera sencilla y sin la necesidad de escribir código complicado. La librería está diseñada para ser fácil de usar, ligera y altamente personalizable.
+Ani-Motion936 es una librería de animaciones y efectos para desarrolladores web que desean agregar interactividad y atractivo visual a sus páginas web. Con Ani-Motion, puedes crear animaciones complejas y efectos de manera sencilla y sin la necesidad de escribir código complicado. La librería está diseñada para ser fácil de usar, ligera y altamente personalizable.
 
 # Cómo Instalar Ani-Motion
 
@@ -39,7 +39,7 @@ Para empezar a utilizar Ani-Motion, simplemente incluye el archivo sass en tu pr
 
 ``` scss
 
-@import 'Ani-Motion/Ani-Mixins/ani-mixins';
+@import 'ani-motion936/Ani-Mixins/ani-mixins';
 
 ```
 ### Uso
@@ -95,7 +95,7 @@ o puedes incluirlo directamente en el HTML, aunque para algunos efectos de texto
 ```
 
 ```html
-<script src='ani-motion936/Motions/Motions.js'></script>
+<script src='ani-motion936/Motions/JMotions.js'></script>
 ```
 
 ## Uso
@@ -131,9 +131,93 @@ new TextChange({
     interval: 3000,//tiempo de cambio
 })
 ```
+
+# Buttons Effects (Beta)
+
+¡Bienvenido a Buttons Effects! Esta emocionante librería se encuentra actualmente en fase beta y te ofrece una vista previa de los futuros efectos de botones que estamos desarrollando para enriquecer tus diseños web. Con Buttons Effects Beta, puedes dar un toque especial a tus botones y crear interacciones atractivas con tus usuarios.
+
+## Características Actuales
+
+- ****Efectos de:**** loading, scale y shadow
+- Añade dinamismo a tus botones con el eventButton
+
+Estamos trabajando duro para ampliar la gama de efectos y proporcionarte una amplia gama de opciones para tus botones.Cualquier opinión o idea es bienvenida.
+
+## Cómo Comenzar
+
+1. Importa el archivo scss a tu proyecto
+
+```scss
+@import 'Buttons-Effects/buttons';
+```
+2. Y si lo necesitas, tambien puedes importar el archivo JS
+
+```js
+import {effects, eventButtons} from './Buttons-Effects/Jbuttons.js'
+```
+
+
+**Nota:** Buttons-Effects está en pleno desarrollo, lo que significa que puedes esperar más actualizaciones y nuevos efectos a medida que avanzamos.
+
+
+# Image Effects (Beta)
+
+¡Bienvenido a Efectos de Imágenes Ani-Motion! Esta librería está en fase beta y te ofrece una vista previa emocionante de los próximos avances de los efectos de imágenes para la web. Aunque actualmente en desarrollo, Ani-Motion Beta te permite experimentar con los primeros efectos de imágenes que estamos construyendo.
+
+## Características Actuales
+
+- Aplica efectos sutiles de parallax a fondos
+- Aplica imagenes en textos más facilmente
+
+- Usa el imgScroll para crear una transicion suave a las imagenes al entrar en pantalla
+
+Estamos trabajando arduamente para expandir nuestra colección de efectos y brindarte herramientas poderosas para elevar tus diseños web. Mientras tanto, nos encantaría que pruebes lo que tenemos hasta ahora y nos des tu opinión, si tienes alguna idea para algún efecto no dudes en contactarnos.
+
+## Cómo Comenzar
+
+1. Importa el archivo sass al proyecto en cuestion.
+
+```scss
+@import 'Img-Effects/imgEff';
+```
+
+2. Si lo necesitas para el efecto de imgcroll
+
+```javascript
+import {imgScroll} from './Img-Effects/imgEff.js'
+```
+
+**Nota:** img-Effects está en desarrollo activo y se esperan más actualizaciones en el futuro cercano. Mantente atento a nuevas versiones y efectos emocionantes.
+
+## Uso
+A continuación se proporcionara un ejemplo de cómo usar la librería:
+
+Tu elemento:
+```html
+<img src="https://yt3.googleusercontent.com/PnauUllezwGri2kY-taQRS96rFPLr4HnxvfV_ulkyfGZW4Ep5NUeWI_mr-MxHrNTLeWgoprM=s900-c-k-c0x00ffffff-no-rj" alt="" class="zoom-image">
+```
+
+Estilos:
+
+```scss
+.zoom-image{
+    @include zoom-image($time, $time-line)
+}
+```
+
+en tu archivo javascript
+``` javascript
+imgScroll({
+    element:document.querySelector('zoom-image'),
+    minScale: 1,
+    maxScale: 1.6,
+    units: 0.005
+})
+```
+
 # Contribución
 
-¡Tu contribución es bienvenida! Si tienes alguna idea o mejora para Ani-Motion, siéntete libre de enviar un pull request
+¡Tu contribución es bienvenida! Si tienes alguna idea o mejora para Ani-Motion, siéntete libre de enviar un pull request.
 
 # Licencia
 Ani-Motion se distribuye bajo la Licencia MIT. Consulta el archivo LICENSE para obtener más información.
@@ -141,7 +225,3 @@ Ani-Motion se distribuye bajo la Licencia MIT. Consulta el archivo LICENSE para 
 # Contacto
 
 Para cualquier consulta o comentario, no dudes en contactarnos a través de animotion936@gmail.com.
-
-
-
-
