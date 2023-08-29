@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ani-Motion | Docs</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/animotion.png" type="image/x-icon">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- iconos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body class="body-doc">
+    <nav class="nav">
+        <div class="nav__logo-container">
+            <a href="../index.html" class="nav__logo">
+                <img src="../assets/animotion.png" alt="">
+            </a>
+        </div>
+        <ul class="nav__ul">
+            <li class="nav__li"><i class="bi bi-x"></i></li>
+            <li class="nav__li"><a href="../index.html" class="nav__link">Home</a></li>
+            <li class="nav__li"><a href="../docs.html" class="nav__link nav__li--active">Docs</a></li>
+            <li class="nav__li"><a href="../examples.html" class="nav__link">Examples</a></li>
+            <li class="nav__li"><a href="../about.html" class="nav__link">About</a></li>
+        </ul>
+
+        <div class="nav__version version">
+            <p class="nav__p"></p>
+        </div>
+
+        <div class="nav__toggle">
+            <i class="bi bi-list-nested nav__icon"></i>
+        </div>
+    </nav>
+    <main class="main-doc">
+        <aside class='main-doc__aside'>
+            <ul class="main-doc__ul">
+                <li class="main-doc__list"><i class="bi bi-puzzle-fill color-yellow"></i> Ani-Mixin</li>
+                <li class="main-doc__li"><a href="../docs.html#slide">SlideY</a></li>
+                <li class="main-doc__li"><a href="../docs.html#slide">SlideX</a></li>
+                <li class="main-doc__li"><a href="../docs.html#fadeOff">FadeOff</a></li>
+                <li class="main-doc__li"><a href="../docs.html#rotate360">Rotate360</a></li>
+                <li class="main-doc__li"><a href="../docs.html#spiral">Spiral</a></li>
+                <li class="main-doc__li"><a href="../docs.html#float">Float</a></li>
+                <li class="main-doc__li"><a href="../docs.html#scale">Scale</a></li>
+                <li class="main-doc__li"><a href="../docs.html#scaleReverse">ScaleReverse</a></li>
+                <li class="main-doc__li"><a href="../docs.html#reboundTop">ReboundTop</a></li>
+                <li class="main-doc__li"><a href="../docs.html#vibrate">Vibrate</a></li>
+                <li class="main-doc__li"><a href="../docs.html#repose">Repose</a></li>
+                <li class="main-doc__li"><a href="../docs.html#roll">Roll</a></li>
+                <li class="main-doc__li"><a href="../docs.html#rolls">RollLeft</a></li>
+                <li class="main-doc__li"><a href="../docs.html#rolls">RollRight</a></li>
+                <li class="main-doc__list"><i class="bi bi-gear-fill color-orange"></i>Motions</li>
+                <li class="main-doc__li"><a href="Motions.html#animation">Animation</a></li>
+                <li class="main-doc__li"><a href="Motions.html#TextChange">TextChange</a></li>
+                <li class="main-doc__li"><a href="Motions.html#aniIntersection">AniIntersection</a></li>
+                <li class="main-doc__li"><a href="Motions.html#aniObjects">AniObjects</a></li>
+                <li class="main-doc__list"><i class="bi bi-play-fill color-red"></i>Button-Effects</li>
+                <li class="main-doc__li"><a href="#s">Btn-scale</a></li>
+                <li class="main-doc__li"><a href="#s">Btn-shadow</a></li>
+                <li class="main-doc__li"><a href="#s">Btn-loading</a></li>
+                <li class="main-doc__li"><a href="#s">Btn-light</a></li>
+                <li class="main-doc__list"><i class="bi bi-image-fill color-green"></i>Img-Effects</li>
+                <li class="main-doc__li"><a href="#s">ParallaX</a></li>
+                <li class="main-doc__li"><a href="#s">TextImg</a></li>
+                <li class="main-doc__li"><a href="#s">zoom-image</a></li>
+            </ul>
+        </aside>
+        <main class="main-doc__container">
+            <header class="main-doc__header">
+                <div class="d-flex">
+                    <h1 class="main-doc__title">Motions</h1>
+                    <a href="https://github.com/isidro936/Ani-Motion/tree/dist" class="button-secondary">Ver
+                        repositorio</a>
+                </div>
+                <h2 class="main-doc__subtitle">Aplica animaciones y efectos con js y más.</h2>
+                <p class="main-doc__p margin-top">Los "Motions" son el conjunto más grande dentro de nuestra librería,
+                    convirtiendo los poderosos "Ani-Mixins" en dinámicas clases y dandoles vida mediante JavaScript.
+                </p>
+            </header>
+            <section class="main-doc__section">
+                <div>
+                    <h3 class="main-doc__section__title">Como empezar a usarlo</h3>
+                    <p class="main-doc__p">Para empezar a utilizar Motion, simplemente incluye los archivos Sass y
+                        JavaScript en tu proyecto:</p>
+                </div>
+                <div class="about-content">
+                    <p class="color-pink">@use <span class="color-green">'ani-motion936/Motions/Motions'</span>;</p>
+                    <i class="bi-clipboard"></i>
+                </div>
+                <p class="main-doc__p">o puedes incluirlo directamente en el HTML, aunque para algunos efectos de texto
+                    se usan los mixins de sass:</p>
+                <div class="about-content">
+                    <p class="color-blue">&lt;link <span class="color-green"> <span
+                                class="color-yellow">rel=</span>"stylesheet" <span
+                                class="color-yellow">href=</span>"ani-motion936/Motions/Motions.css"&gt;</span>;</p>
+                    <i class="bi-clipboard"></i>
+                </div>
+                <div class="about-content">
+                    <p class="color-pink">import <span class="color-yellow">{ TextChange, AniIntersection, animation
+                            }</span> from <span class="color-green">'ani-motion936/Motions/JMotions.js'</span></p>
+                    <i class="bi-clipboard"></i>
+                </div>
+            </section>
+            <section class="main-doc__section" id="animation">
+                <h2 class="main-doc__title tags-center">Animation <span class="js-tag">JS</span></h2>
+                <p class="main-doc__p">Este efecto forma parte de la colección "Motions", agrega dinámicas animaciones a
+                    elementos web. La clase animation permite aplicar efectos al detectar eventos como clics.</p>
+                <h3 class="main-doc__section__title">Uso</h3>
+                <p><strong>1- Importar la Clase:</strong>
+                    Primero, asegúrate de haber importado la clase animation desde la librería en tu proyecto.</p>
+                <div class="about-content">
+                    <p class="color-pink">import<span class="color-yellow"> { TextChange, AniIntersection, animation
+                            }</span> from <span class="color-green">'ani-motion936/Motions/JMotions.js'</span></p>
+                    <i class="bi bi-clipboard"></i>
+                </div>
+                <p><strong>2- Creación de una Instancia:</strong>
+                    Crea una instancia de la clase animation pasando un objeto de configuración como argumento. Este
+                    objeto debe contener al menos dos propiedades:</p>
+                <ul class="main-doc__li">
+                    <li><strong class="color-blue">element:</strong> El elemento HTML al que deseas aplicar la
+                        animación. </li>
+                    <li><strong class="color-blue">animation:</strong> El nombre de la clase CSS que define la
+                        animación. </li>
+                </ul>
+                <div class="d-flex flex-column">
+                    <h3>Ejemplo:</h3>
+                    <div class="coding-sec">
+                        <p class="color-pink">
+                            const <span class="color-yellow">animationInstance</span> = new <span
+                                class="color-blue">animation</span>({ <br>
+                            <span class="space-tab color-yellow">element: document.querySelector(<span
+                                    class="color-green">'.my-element'</span>),</span><br>
+                            <span class="space-tab color-yellow">animation: <span class="color-green">'slideY'</span>
+                            </span>
+                            <br> });
+                        </p>
+                    </div>
+                    <p><strong>3- Aplicar Animación sin Evento:</strong> Si deseas aplicar la animación sin ningún
+                        evento específico, la clase de animación se añadirá inmediatamente al elemento proporcionado.
+                    </p>
+                    <p><strong>4- Aplicar Animación con Evento:</strong> Si deseas que la animación se aplique en
+                        respuesta a un evento (por ejemplo, un clic), especifica la propiedad <strong
+                            class="color-blue">event</strong> en el objeto de configuración. Puedes proporcionar un
+                        evento HTML válido, como 'click' o 'mouseenter'.</p>
+                    <p><strong>5- Definir Tiempo de Finalización (Opcional):</strong> Si deseas que la clase de
+                        animación se elimine después de un cierto período de tiempo, proporciona la propiedad <strong
+                            class="color-blue">timeout</strong> en milisegundos en el objeto de configuración. Esto es
+                        útil para animaciones temporizadas.</p>
+                    <h3>Ejemplo:</h3>
+                    <div class="coding-sec">
+                        <p class="color-pink">
+                            const <span class="color-yellow">animationInstance</span> = new <span
+                                class="color-blue">animation</span>({ <br>
+                            <span class="space-tab color-yellow">element: document.querySelector(<span
+                                    class="color-green">'.my-element'</span>),</span><br>
+                            <span class="space-tab color-yellow">animation: <span
+                                    class="color-green">'fadeOff'</span>,</span><br>
+                            <span class="space-tab color-yellow">event: <span
+                                    class="color-green">'click'</span>,</span><br>
+                            <span class="space-tab color-yellow">timeout: <span class="color-blue">2000</span></span>
+                            <br> });
+                        </p>
+                    </div>
+                    <div class="d-flex justify-center">
+                        <a href="../examples.html" class="button-tertiary">no dispoble en examples</a>
+                    </div>
+                </div>
+            </section>
+            <section class="main-doc__section" id="TextChange">
+                <h2 class="main-doc__title">TextChange</h2>
+                <p class="main-doc__p">Este efecto te permite cambiar dinámicamente el contenido de un elemento HTML con
+                    una serie de textos predefinidos. Aquí tienes una guía sobre cómo usar este efecto:</p>
+                <p><strong>1- Importar la Clase:</strong> Asegúrate de haber importado la clase TextChange desde la
+                    librería en tu proyecto.</p>
+                <p><strong>2- Creación de una Instancia:</strong> Crea una instancia de la clase TextChange pasando un
+                    objeto de configuración como argumento. Este objeto debe contener las siguientes propiedades:</p>
+                <ul class="main-doc__li">
+                    <li><strong class="color-blue">element:</strong> El elemento HTML en el que deseas cambiar el texto.
+                    </li>
+                    <li><strong class="color-blue">texts:</strong> Un array que contiene los textos que deseas mostrar
+                        de manera cíclica.</li>
+                    <li><strong class="color-blue">animation:</strong> El nombre de la clase CSS que define la
+                        animación.</li>
+                    <li><strong class="color-blue">interval:</strong> El intervalo de tiempo (en milisegundos) entre
+                        cambios de texto.</li>
+                </ul>
+                <div class="coding-sec">
+                    <p class="color-pink">
+                        const <span class="color-yellow">TextChangeInstance</span> = new <span
+                            class="color-blue">TextChange</span>({ <br>
+                        <span class="space-tab color-yellow">element: document.querySelector(<span
+                                class="color-green">'.my-text'</span>),</span><br>
+                        <span class="space-tab color-yellow">animation: <span
+                                class="color-green">'slideY'</span>,</span><br>
+                        <span class="space-tab color-yellow">texts: [<span class="color-green">'Texto 1', 'Texto 2',
+                                'Texto 3'</span>],</span><br>
+                        <span class="space-tab color-yellow">interval: <span class="color-blue">3000</span></span>
+                        <br> });
+                    </p>
+                </div>
+                <p><strong>3- Cambio de Texto Automático:</strong>
+                    Una vez que se crea la instancia, el efecto TextChange cambiará automáticamente el contenido del
+                    elemento HTML a intervalos regulares, usando los textos proporcionados en el array <strong
+                        class="color-blue">texts.</strong></p>
+                <p><strong>4- Personalización de Animación:</strong>
+                    Puedes personalizar la animación aplicada al cambiar el texto al especificar la clase CSS en la
+                    propiedad <strong class="color-blue">animation.</strong></p>
+                <p><strong>5- Detener el Cambio de Texto:</strong>
+                    Si deseas detener el cambio automático de texto en algún momento, utiliza el método <strong
+                        class="color-yellow">stopTextChange()</strong> en la instancia creada:</p>
+                <div class="about-content">
+                    <p class="color-yellow">
+                        TextChangeInstance.<span class="color-blue">stopTextChange()</span>
+                    </p> <i class="bi bi-clipboard"></i>
+                </div>
+                <div class="d-flex justify-center">
+                    <a href="../examples.html" class="button-secondary">Probar animaciones</a>
+                </div>
+            </section>
+            <section class="main-doc__section" id="aniIntersection">
+                <h2 class="main-doc__title">aniIntersection</h2>
+                <p class="main-doc__p">Este efecto de nuestra librería te permite aplicar animaciones a elementos HTML
+                    cuando entran en la vista del usuario (viewport) mientras se desplaza por la página. Aquí te
+                    mostramos cómo utilizar este efecto:</p>
+                <p><strong>1- Importar la Clase:</strong>
+                    Asegúrate de haber importado la clase AniIntersection desde la librería en tu proyecto.</p>
+                <p><strong>2- Creación de una Instancia:</strong>
+                    Crea una instancia de la clase AniIntersection pasando un objeto de configuración como argumento.
+                    Este objeto debe contener las siguientes propiedades:</p>
+                <ul class="main-doc__li">
+                    <ul><strong class="color-blue">element:</strong> El elemento HTML al que deseas aplicar la animación
+                        al
+                        entrar en la vista. </ul>
+                    <ul><strong class="color-blue">animation:</strong> El nombre de la clase CSS que define la
+                        animación.</ul>
+                </ul>
+                <div class="coding-sec">
+                    <p class="color-pink">const <span class="color-yellow">intersectionInstance</span>  = new <span class="color-blue">AniIntersection</span>({<br>
+                        <span class=" space-tab color-yellow">element: document.querySelector(<span
+                                class="color-green">'.animated-element'</span>)</span>,<br>
+                        <span class="space-tab color-yellow ">animation: <span class="color-green">'scale'</span>
+                        </span><br>
+                        });
+                    </p>
+                </div>
+                <div class="d-flex justify-center">
+                    <a href="../examples.html" class="button-tertiary">no dispoble en examples</a>
+                </div>
+            </section>
+
+        </main>
+    </main>
+    <script type="module" src="../scss/components/nav.js"></script>
+</body>
+
+
+</html>

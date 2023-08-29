@@ -1,6 +1,104 @@
-.main-doc{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.body-doc{
+    overflow: hidden;
+}
+
+.main-doc {
+    display: grid;
+    grid-template-columns: 20% 80%;
     height: calc(100vh - 4em);
+    overflow: hidden;
+    position: relative;
+
+    &__aside {
+        display: flex;
+        padding: 1em;
+        padding-left: 3em;
+        overflow-y: auto;
+        border-right: 1px solid rgba(0, 0, 0, 0.155);
+        box-shadow: 4px 0px 7px -5px rgba(0, 0, 0, 0.25);
+        height: calc(100vh - 4em);
+
+    }
+
+    &__ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    &__list {
+        font-weight: 700;
+        font-size: 1em;
+        display: flex;
+        gap: 0.5em;
+    }
+
+    &__list--active {
+        padding: 0.2em;
+        background-color: var(--color-amarillo-degradado);
+        border-radius: 5px;
+        color: var(--color-amarillo-intenso);
+    }
+
+    &__li {
+        margin-left: 1.5em;
+        font-size: 0.9em;
+        padding: 0;
+        
+        a:hover{
+            transition: all 100ms;
+            background-color: var(--color-amarillo);
+            padding: 0.3em 0.5em;
+            border-radius: 5px;
+        }
+    }
+
+    &__li--active a{
+        transition: all 100ms;
+        background-color: var(--color-amarillo);
+        padding: 0.3em 0.5em;
+        border-radius: 5px;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 2em;
+        padding: 2em;
+        overflow-y: auto;
+    }
+
+    &__content {
+        color: white;
+
+    }
+
+    &__title {
+        font-size: 2em;
+        font-family: 'Poppins';
+    }
+
+    &__subtitle {
+        font-size: 1.5em;
+        font-weight: 400;
+        font-family: 'system-ui';
+        color: rgba(0, 0, 0, 0.70);
+    }
+
+    &__section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        &__title{
+            font-size: 1.5em;
+        }
+    }
+
+    &__p{
+        font-size: 1em;
+        font-weight: 500;
+    }
 }

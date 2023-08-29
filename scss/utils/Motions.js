@@ -3,8 +3,8 @@ export class AniIntersection {
         this._objectProp = objectProp
 
         const options = {
-            root: null, 
-            threshold: 0.10 
+            root: null,
+            threshold: 0.10
         };
 
         const observer = new IntersectionObserver(this.handleIntersection.bind(this), options);
@@ -15,15 +15,15 @@ export class AniIntersection {
 
     handleIntersection(entries) {
         entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            this._objectProp.element.classList.add(this._objectProp.animation);
-        } else {
-            this._objectProp.element.classList.remove(this._objectProp.animation);
-        }
-        
+            if (entry.isIntersecting) {
+                this._objectProp.element.classList.add(this._objectProp.animation);
+            } else {
+                this._objectProp.element.classList.remove(this._objectProp.animation);
+            }
+
         });
 
-        
+
     }
 }
 
@@ -41,11 +41,11 @@ export class TextChange {
 
     _startTextChange() {
         this._intervalId = setInterval(() => {
-        this._currentIndex = (this._currentIndex + 1) % this._objectProp.texts.length;
-        this._objectProp.element.textContent = this._objectProp.texts[this._currentIndex];
-        this._objectProp.element.classList.remove(this._objectProp.animation);
-        void this._objectProp.element.offsetWidth;
-        this._objectProp.element.classList.add(this._objectProp.animation);
+            this._currentIndex = (this._currentIndex + 1) % this._objectProp.texts.length;
+            this._objectProp.element.textContent = this._objectProp.texts[this._currentIndex];
+            this._objectProp.element.classList.remove(this._objectProp.animation);
+            void this._objectProp.element.offsetWidth;
+            this._objectProp.element.classList.add(this._objectProp.animation);
         }, this._objectProp.interval);
     }
 
@@ -53,38 +53,38 @@ export class TextChange {
         clearInterval(this._intervalId);
     }
 }
-  
 
-export class animation{
-    constructor(objectProp){
+
+export class animation {
+    constructor(objectProp) {
         this._objectProp = objectProp;
 
-        if(this._objectProp.event === undefined){
+        if (this._objectProp.event === undefined) {
             this._eventNull()
-        }else(
+        } else (
             this._event()
         )
     }
-    _addAnimation(){
+    _addAnimation() {
         this._objectProp.element.classList.add(this._objectProp.animation)
     }
 
-    _timeout(){
-        setTimeout(()=>{
+    _timeout() {
+        setTimeout(() => {
             this._objectProp.element.classList.remove(this._objectProp.animation)
         }, this._objectProp.timeout)
     }
 
-    _event(){
-        this._objectProp.element.addEventListener(this._objectProp.event,()=>{
+    _event() {
+        this._objectProp.element.addEventListener(this._objectProp.event, () => {
             this._addAnimation()
 
-            if(this._objectProp.timeout != undefined){
+            if (this._objectProp.timeout != undefined) {
                 this._timeout()
             }
         })
     }
-    _eventNull(){
+    _eventNull() {
         this._addAnimation()
-    } 
+    }
 }

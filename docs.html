@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +12,12 @@
     <!-- iconos Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
-<body>
+
+<body class="body-doc">
     <nav class="nav">
         <div class="nav__logo-container">
             <a href="index.html" class="nav__logo">
-                <img src="assets/animotion.png" alt=""> 
+                <img src="assets/animotion.png" alt="">
             </a>
         </div>
         <ul class="nav__ul">
@@ -35,9 +37,427 @@
         </div>
     </nav>
     <main class="main-doc">
-        <h1>Documentación proximamente</h1>
+        <aside class='main-doc__aside'>
+            <ul class="main-doc__ul">
+                <li class="main-doc__list"><i class="bi bi-puzzle-fill color-yellow"></i> Ani-Mixin</li>
+                <li class="main-doc__li"><a href="#slide">SlideY</a></li>
+                <li class="main-doc__li"><a href="#slide">SlideX</a></li>
+                <li class="main-doc__li"><a href="#fadeOff">FadeOff</a></li>
+                <li class="main-doc__li"><a href="#rotate360">Rotate360</a></li>
+                <li class="main-doc__li"><a href="#spiral">Spiral</a></li>
+                <li class="main-doc__li"><a href="#float">Float</a></li>
+                <li class="main-doc__li"><a href="#scale">Scale</a></li>
+                <li class="main-doc__li"><a href="#scaleReverse">ScaleReverse</a></li>
+                <li class="main-doc__li"><a href="#reboundTop">ReboundTop</a></li>
+                <li class="main-doc__li"><a href="#vibrate">Vibrate</a></li>
+                <li class="main-doc__li"><a href="#repose">Repose</a></li>
+                <li class="main-doc__li"><a href="#roll">Roll</a></li>
+                <li class="main-doc__li"><a href="#rolls">RollLeft</a></li>
+                <li class="main-doc__li"><a href="#rolls">RollRight</a></li>
+                <li class="main-doc__list"><i class="bi bi-gear-fill color-orange"></i>Motions</li>
+                <li class="main-doc__li"><a href="pages/Motions.html#animation">Animation</a></li>
+                <li class="main-doc__li"><a href="pages/Motions.html#TextChange">TextChange</a></li>
+                <li class="main-doc__li"><a href="pages/Motions.html#aniIntersection">AniIntersection</a></li>
+                <li class="main-doc__li"><a href="pages/Motions.html#aniObjects">AniObjects</a></li>
+                <li class="main-doc__list"><i class="bi bi-play-fill color-red"></i>Button-Effects</li>
+                <li class="main-doc__li"><a href="#s">Btn-scale</a></li>
+                <li class="main-doc__li"><a href="#s">Btn-shadow</a></li>
+                <li class="main-doc__li"><a href="#s">Btn-loading</a></li>
+                <li class="main-doc__li"><a href="#s">Btn-light</a></li>
+                <li class="main-doc__list"><i class="bi bi-image-fill color-green"></i>Img-Effects</li>
+                <li class="main-doc__li"><a href="#s">ParallaX</a></li>
+                <li class="main-doc__li"><a href="#s">TextImg</a></li>
+                <li class="main-doc__li"><a href="#s">zoom-image</a></li>
+            </ul>
+        </aside>
+        <main class="main-doc__container">
+            <header class="main-doc__header">
+                <div class="d-flex">
+                    <h1 class="main-doc__title">Ani-Mixin</h1>
+                    <a href="https://github.com/isidro936/Ani-Motion/tree/dist" class="button-secondary">Ver
+                        repositorio</a>
+                </div>
+                <h2 class="main-doc__subtitle">Ani-Motion936 introduce los "Ani-Mixins": animaciones en Mixins de sass
+                    personalizables.</h2>
+            </header>
+            <section class="main-doc__section">
+                <div>
+                    <h3 class="main-doc__section__title">Como empezar a usarlo</h3>
+                    <p class="main-doc__p">Para empezar a utilizar los Ani-Mixin, simplemente incluye la librería en tu
+                        proyecto y luego importa el archivos sass a tu proyecyo:</p>
+                </div>
+                <div class="about-content">
+                    <p class="color-pink">@import <span class="color-green">'../utils/Ani-Mixins/ani-mixins'</span>;</p>
+                    <i class="bi-clipboard"></i>
+                </div>
+            </section>
+            <section class="main-doc__section" id="slide">
+                <h2 class="main-doc__title">SlideY and SlideX</h2>
+                <p class="main-doc__p">Estos mixins CSS simplifican la aplicación de animaciones de entrada deslizante
+                    vertical y horizontal en tus proyectos web. Simplemente, ajusta los valores de duración, retardo,
+                    dirección y distancia para lograr resultados visualmente atractivos.</p>
+
+                <div class="about-content">
+                    <p class="color-pink">@include <span class="color-blue">slideY</span><span
+                            class="color-yellow">($duration, $delay, $mode, $time-line, $distance)</span>;</p><i
+                        class="bi bi-clipboard"></i>
+                </div>
+                <div class="d-flex flex-column">
+                    <h3 class="main-doc__section__title">Ejemplos</h3>
+                    <div class="coding-sec">
+                        <p>//Archivo del repositorio</p>
+                        <p class="color-pink">@import <span
+                                class="color-green">'Ani-Motion/Ani-Mixins/ani-mixins'</span>;</p>
+                        <br>
+                        <p class="color-yellow">.element{<br>
+                            <span class="color-blue space-tab">font-size:2em;</span><br>
+                            <span class="color-blue space-tab">font-family:<span
+                                    class="color-green">'Roboto'</span>;</span><br>
+                            <span class="color-pink space-tab">@include <span class="color-blue">slideY(1s, 0s,
+                                    ease,both, 50px)</span>;</span>
+                            <br>}
+                        </p>
+                    </div>
+                    <div class="coding-sec">
+                        <p class="color-yellow">.element{<br>
+                            <span class="color-blue space-tab">font-size:2em;</span><br>
+                            <span class="color-blue space-tab">font-family:<span
+                                    class="color-green">'Roboto'</span>;</span><br>
+                            <span class="color-pink space-tab">@include <span class="color-blue">slideX(1s, 0s,
+                                    ease,both, 50px)</span>;</span>
+                            <br>}
+                        </p>
+                    </div>
+                    <div class="d-flex justify-center">
+                        <a href="examples.html" class="button-secondary">Probar animaciones</a>
+                    </div>
+                </div>
+            </section>
+            <section class="main-doc__section" id="fadeOff">
+                <h2 class="main-doc__title">FadeOff</h2>
+                <p class="main-doc__p">El efecto de desvanecimiento "FadeOff" agrega un toque de elegancia a tus
+                    elementos al desvanecerlos de forma suave y gradual.</p>
+                <div class="about-content">
+                    <p class="color-pink">@include fadeOff(<span class="color-yellow">$duration, $delay, $mode,
+                            $time-line</span>);</p><i class="bi bi-clipboard"></i>
+                </div>
+                <div class="d-flex flex-column">
+                    <h3 class="main-doc__section__title">Ejemplo</h3>
+                </div>
+                <div class="coding-sec">
+                    <p class="color-yellow">.element{<br>
+                        <span class="color-blue space-tab">font-size:2em;</span><br>
+                        <span class="color-blue space-tab">font-family:<span
+                                class="color-green">'Roboto'</span>;</span><br>
+                        <span class="color-pink space-tab">@include <span class="color-blue">fadeOff(1s, 0s,
+                                ease, forward)</span>;</span>
+                        <br>}
+                    </p>
+                </div>
+                <div class="d-flex justify-center">
+                    <a href="examples.html" class="button-secondary">Probar animaciones</a>
+                </div>
+            </section>
+            <section class="main-doc__section" id="rotate360">
+                <h2 class="main-doc__title">Rotate360</h2>
+                <p class="main-doc__p">El efecto de rotación "Rotate360" aporta un dinamismo llamativo a tus elementos,
+                    creando una rotación completa de 360 grados con un toque de movimiento y estilo. </p>
+                <div class="about-content">
+                    <p class="color-pink">@include Rotate360(<span class="color-yellow">$duration, $delay, $mode,
+                            $time-line</span>);</p><i class="bi bi-clipboard"></i>
+                </div>
+                <div class="d-flex flex-column">
+                    <h3 class="main-doc__section__title">Ejemplo</h3>
+                </div>
+                <div class="coding-sec">
+                    <p class="color-yellow">.element{<br>
+                        <span class="color-blue space-tab">font-size:2em;</span><br>
+                        <span class="color-blue space-tab">font-family:<span
+                                class="color-green">'Roboto'</span>;</span><br>
+                        <span class="color-pink space-tab">@include <span class="color-blue">rotate360(1s, 0s,
+                                ease, forward)</span>;</span>
+                        <br>}
+                    </p>
+                </div>
+                <div class="d-flex justify-center">
+                    <a href="examples.html" class="button-secondary">Probar animaciones</a>
+                </div>
+            </section>
+            <section class="main-doc__section" id="spiral">
+                <h2 class="main-doc__title">Spiral</h2>
+                <p class="main-doc__p">El efecto "Spiral" agrega un toque de dinamismo y curiosidad a tus elementos al
+                    crear una animación que simula el movimiento en espiral.</p>
+                <div class="about-content">
+                    <p class="color-pink">@include spiral(<span class="color-yellow">$duration, $delay, $mode,
+                            $time-line</span>);</p><i class="bi bi-clipboard"></i>
+                </div>
+                <div class="d-flex flex-column">
+                    <h3 class="main-doc__section__title">Ejemplo</h3>
+                </div>
+                <div class="coding-sec">
+                    <p class="color-yellow">.element{<br>
+                        <span class="color-blue space-tab">font-size:2em;</span><br>
+                        <span class="color-blue space-tab">font-family:<span
+                                class="color-green">'Roboto'</span>;</span><br>
+                        <span class="color-pink space-tab">@include <span class="color-blue">spiral(1s, 0s,
+                                ease, forward)</span>;</span>
+                        <br>}
+                    </p>
+                </div>
+                <div class="d-flex justify-center">
+                    <a href="examples.html" class="button-secondary">Probar animaciones</a>
+                </div>
+            </section>
+            <section class="main-doc__section" id="float">
+                <h2 class="main-doc__title">Float</h2>
+                <p class="main-doc__p">Para emplear el efecto "Float" a través del mixin, simplemente agrega la línea de
+                    código <span class="color-blue">a continuación</span> en tu hoja de estilos Sass. Ajusta los valores
+                    de duración, retardo, modo de temporización, línea de tiempo y distancia según tus preferencias.
+                    Este efecto creará una animación que da la ilusión de que el elemento está flotando suavemente en el
+                    aire, añadiendo una sensación de gracia y ligereza a tu diseño web.</p>
+                <div class="about-content">
+                    <p class="color-pink">@include float(<span class="color-yellow">$duration, $delay, $mode,
+                            $time-line, $distance</span>);</p><i class="bi bi-clipboard"></i>
+                </div>
+                <div class="d-flex flex-column">
+                    <h3 class="main-doc__section__title">Ejemplo</h3>
+                </div>
+                <div class="coding-sec">
+                    <p class="color-yellow">.element{<br>
+                        <span class="color-blue space-tab">font-size:2em;</span><br>
+                        <span class="color-blue space-tab">font-family:<span
+                                class="color-green">'Roboto'</span>;</span><br>
+                        <span class="color-pink space-tab">@include <span class="color-blue">float(1s, 0s,
+                                ease, forward, 30px)</span>;</span>
+                        <br>}
+                    </p>
+                </div>
+                <div class="d-flex justify-center">
+                    <a href="examples.html" class="button-secondary">Probar animaciones</a>
+                </div>
+            </section>
+            <section class="main-doc__section" id="scale">
+                <h2 class="main-doc__title">Scale</h2>
+                <p class="main-doc__p">Para aplicar el efecto de escala utilizando el mixin "scale", simplemente incluye
+                    la línea de código <span class="color-blue">a continuación</span> en tu hoja de estilos Sass. Ajusta
+                    los valores de duración, retardo, modo de temporización y la línea de tiempo.</p>
+                <div class="about-content">
+                    <p class="color-pink">@include scale(<span class="color-yellow">$duration, $delay, $mode,
+                            $time-line</span>);</p><i class="bi bi-clipboard"></i>
+                </div>
+                <p class="main-doc__p">Este efecto producirá una suave animación de escala en el elemento seleccionado,
+                    creando un efecto visual atractivo que destaca y resalta elementos clave en tu diseño web.</p>
+                <div class="d-flex flex-column">
+                    <h3 class="main-doc__section__title">Ejemplo</h3>
+                </div>
+                <div class="coding-sec">
+                    <p class="color-yellow">.element{<br>
+                        <span class="color-blue space-tab">font-size:2em;</span><br>
+                        <span class="color-blue space-tab">font-family:<span
+                                class="color-green">'Roboto'</span>;</span><br>
+                        <span class="color-pink space-tab">@include <span class="color-blue">scale(1s, 0s,
+                                ease, forward)</span>;</span>
+                        <br>}
+                    </p>
+                </div>
+                <div class="d-flex justify-center">
+                    <a href="examples.html" class="button-secondary">Probar animaciones</a>
+                </div>
+            </section>
+            <section class="main-doc__section" id="scaleReverse">
+                <h2 class="main-doc__title">ScaleRevere</h2>
+                <p class="main-doc__p">Para implementar el efecto "ScaleRevere" mediante el mixin, basta con insertar la
+                    línea de código <span class="color-blue">a continuación</span> en tu hoja de estilos Sass. Ajusta
+                    los valores de duración, retardo, modo de temporización y la línea de tiempo.</p>
+                <div class="about-content">
+                    <p class="color-pink">@include scaleRevere(<span class="color-yellow">$duration, $delay, $mode,
+                            $time-line</span>);</p><i class="bi bi-clipboard"></i>
+                </div>
+                <p class="main-doc__p">Este efecto transforma el tamaño de un elemento de forma inversa, generando un
+                    efecto visual cautivador.</p>
+                <div class="d-flex flex-column">
+                    <h3 class="main-doc__section__title">Ejemplo</h3>
+                </div>
+                <div class="coding-sec">
+                    <p class="color-yellow">.element{<br>
+                        <span class="color-blue space-tab">font-size:2em;</span><br>
+                        <span class="color-blue space-tab">font-family:<span
+                                class="color-green">'Roboto'</span>;</span><br>
+                        <span class="color-pink space-tab">@include <span class="color-blue">scaleRevere(1s, 0s,
+                                ease, forward)</span>;</span>
+                        <br>}
+                    </p>
+                </div>
+                <div class="d-flex justify-center">
+                    <a href="examples.html" class="button-secondary">Probar animaciones</a>
+                </div>
+            </section>
+            <section class="main-doc__section" id="reboundTop">
+                <h2 class="main-doc__title">ReboundTop</h2>
+                <p class="main-doc__p">Para aplicar el efecto "ReboundTop" utilizando el mixin, simplemente agrega la
+                    línea de código <span class="color-blue">a continuación</span> en tu hoja de estilos Sass. Ajusta
+                    los valores de duración, retardo, modo de temporización, línea de tiempo y distancia de rebote de
+                    acuerdo a tus preferencias.</p>
+                <div class="about-content">
+                    <p class="color-pink">@include reboundTop(<span class="color-yellow">$duration, $delay, $mode,
+                            $time-line, $distance</span>);</p><i class="bi bi-clipboard"></i>
+                </div>
+                <p class="main-doc__p">Este efecto generará una animación que simula un rebote del elemento desde la
+                    parte superior, añadiendo un toque de movimiento dinámico y llamativo a tu diseño web.</p>
+                <div class="d-flex flex-column">
+                    <h3 class="main-doc__section__title">Ejemplo</h3>
+                </div>
+                <div class="coding-sec">
+                    <p class="color-yellow">.element{<br>
+                        <span class="color-blue space-tab">font-size:2em;</span><br>
+                        <span class="color-blue space-tab">font-family:<span
+                                class="color-green">'Roboto'</span>;</span><br>
+                        <span class="color-pink space-tab">@include <span class="color-blue">reboundTop(1s, 0s,
+                                ease, forward, 100px)</span>;</span>
+                        <br>}
+                    </p>
+                </div>
+                <div class="d-flex justify-center">
+                    <a href="examples.html" class="button-secondary">Probar animaciones</a>
+                </div>
+            </section>
+            <section class="main-doc__section" id="vibrate">
+                <h2 class="main-doc__title">Vibrate</h2>
+                <p class="main-doc__p">Para implementar el efecto "Vibrate" mediante el mixin, simplemente añade la
+                    línea de código <span class="color-blue">a continuación</span> en tu hoja de estilos Sass. Ajusta
+                    los valores de duración, retardo, modo de temporización y línea de tiempo según tus preferencias.
+                </p>
+                <div class="about-content">
+                    <p class="color-pink">@include vibrate(<span class="color-yellow">$duration, $delay, $mode,
+                            $time-line</span>);</p><i class="bi bi-clipboard"></i>
+                </div>
+                <p class="main-doc__p">Este efecto generará una animación de vibración en el elemento seleccionado,
+                    creando una apariencia dinámica y energética en tu diseño web.</p>
+                <div class="d-flex flex-column">
+                    <h3 class="main-doc__section__title">Ejemplo</h3>
+                </div>
+                <div class="coding-sec">
+                    <p class="color-yellow">.element{<br>
+                        <span class="color-blue space-tab">font-size:2em;</span><br>
+                        <span class="color-blue space-tab">font-family:<span
+                                class="color-green">'Roboto'</span>;</span><br>
+                        <span class="color-pink space-tab">@include <span class="color-blue">vibrate(1s, 0s,
+                                ease, forward)</span>;</span>
+                        <br>}
+                    </p>
+                </div>
+                <div class="d-flex justify-center">
+                    <a href="examples.html" class="button-secondary">Probar animaciones</a>
+                </div>
+            </section>
+            <section class="main-doc__section" id="repose">
+                <h2 class="main-doc__title">Repose</h2>
+                <p class="main-doc__p">Para aplicar el efecto "Repose" utilizando el mixin, simplemente agrega la línea
+                    de código <span class="color-blue">a continuación</span> en tu hoja de estilos Sass. Ajusta los
+                    valores de duración, retardo, modo de temporización, línea de tiempo y escala según tus
+                    preferencias.</p>
+                <div class="about-content">
+                    <p class="color-pink">@include repose(<span class="color-yellow">$duration, $delay, $mode,
+                            $time-line, $scale</span>);</p><i class="bi bi-clipboard"></i>
+                </div>
+                <p class="main-doc__p">Este efecto generará una animación que simula un rebote del elemento desde la
+                    parte superior, añadiendo un toque de movimiento dinámico y llamativo a tu diseño web.</p>
+                <div class="d-flex flex-column">
+                    <h3 class="main-doc__section__title">Ejemplo</h3>
+                </div>
+                <div class="coding-sec">
+                    <p class="color-yellow">.element{<br>
+                        <span class="color-blue space-tab">font-size:2em;</span><br>
+                        <span class="color-blue space-tab">font-family:<span
+                                class="color-green">'Roboto'</span>;</span><br>
+                        <span class="color-pink space-tab">@include <span class="color-blue">repose(1s, 0s,
+                                ease, forward, 1.2)</span>;</span>
+                        <br>}
+                    </p>
+                </div>
+                <div class="d-flex justify-center">
+                    <a href="examples.html" class="button-secondary">Probar animaciones</a>
+                </div>
+            </section>
+            <section class="main-doc__section" id="roll">
+                <h2 class="main-doc__title">Roll</h2>
+                <p class="main-doc__p">El efecto "Roll" añade un giro sutil y elegante a tus elementos, generando una
+                    animación de rotación que agrega dinamismo a tu diseño web. Al usar el mixin @include
+                    roll($duration, $delay, $mode, $time-line, $distance);, puedes ajustar los valores de duración,
+                    retardo, modo de temporización, línea de tiempo y distancia para adaptar el efecto a tus
+                    necesidades. </p>
+                <div class="about-content">
+                    <p class="color-pink">@include roll(<span class="color-yellow">$duration, $delay, $mode,
+                            $time-line, $distance</span>);</p><i class="bi bi-clipboard"></i>
+                </div>
+                <p class="main-doc__p">Este efecto agrega un giro suave y llamativo a tus elementos al combinar
+                    desplazamiento horizontal y rotación.</p>
+                <div class="d-flex flex-column">
+                    <h3 class="main-doc__section__title">Ejemplo</h3>
+                </div>
+                <div class="coding-sec">
+                    <p class="color-yellow">.element{<br>
+                        <span class="color-blue space-tab">font-size:2em;</span><br>
+                        <span class="color-blue space-tab">font-family:<span
+                                class="color-green">'Roboto'</span>;</span><br>
+                        <span class="color-pink space-tab">@include <span class="color-blue">roll(1s, 0s,
+                                ease, forward, 100px)</span>;</span>
+                        <br>}
+                    </p>
+                </div>
+                <div class="d-flex justify-center">
+                    <a href="examples.html" class="button-secondary">Probar animaciones</a>
+                </div>
+            </section>
+            <section class="" id="rolls">
+                <h2 class="main-doc__title">RollLeft and RollRight</h2>
+                <p class="main-doc__p">Los efectos "RollLeft" y "RollRight" aportan una animación de giro y
+                    desplazamiento horizontal a tus elementos, creando un efecto visual cautivador. Al utilizar los
+                    mixins <span class="color-blue">de a continuación</span>, los elementos se desplazarán desde los
+                    lados izquierdo y derecho respectivamente, mientras giran 360 grados. </p>
+                <div class="about-content">
+                    <p class="color-pink">@include rollRight(<span class="color-yellow">$duration, $delay, $mode,
+                            $time-line</span>);</p><i class="bi bi-clipboard"></i>
+                </div>
+                <div class="about-content">
+                    <p class="color-pink">@include rollLeft(<span class="color-yellow">$duration, $delay, $mode,
+                            $time-line</span>);</p><i class="bi bi-clipboard"></i>
+                </div>
+                <p class="main-doc__p">Puedes personalizar los valores de duración, retardo, modo de temporización y
+                    línea de tiempo para adaptar estos efectos según tus necesidades.</p>
+                <div class="d-flex flex-column">
+                    <h3 class="main-doc__section__title">Ejemplo</h3>
+                </div>
+                <div class="coding-sec">
+                    <p class="color-yellow">.element{<br>
+                        <span class="color-blue space-tab">font-size:2em;</span><br>
+                        <span class="color-blue space-tab">font-family:<span
+                                class="color-green">'Roboto'</span>;</span><br>
+                        <span class="color-pink space-tab">@include <span class="color-blue">rollRight(2s, 0s,
+                                ease, forward)</span>;</span>
+                        <br>}
+                    </p>
+                </div>
+                <div class="coding-sec">
+                    <p class="color-yellow">.element{<br>
+                        <span class="color-blue space-tab">font-size:2em;</span><br>
+                        <span class="color-blue space-tab">font-family:<span
+                                class="color-green">'Roboto'</span>;</span><br>
+                        <span class="color-pink space-tab">@include <span class="color-blue">rollLeft(2s, 0s,
+                                ease, forward)</span>;</span>
+                        <br>}
+                    </p>
+                </div>
+                <div class="d-flex justify-center">
+                    <a href="examples.html" class="button-secondary">Probar animaciones</a>
+                </div>
+            </section>
+        </main>
     </main>
 
-    <script type="module" src="scss/components/nav.js"></script>
 </body>
+
+<script type="module" src="scss/components/nav.js"></script>
+<script src="scss/components/copy-content.js"></script>
+<script src="scss/pages/docs.js"></script>
 </html>

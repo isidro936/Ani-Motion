@@ -13,14 +13,54 @@
 }
 
 .button-secondary{
-    width: 10vw;
     background: none;
-    color: white;
+    color: var(--color-amarillo);
+    border: 2px solid var(--color-amarillo);
+    border-radius: 10px;
+    padding: 0.5em;
+    font-size: 0.9em;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 500ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover{
+        transform: translateY(-5px);
+        box-shadow: 0px 5px 5px rgb(207, 207, 207)
+    }
+}
+
+.button-tertiary{
+    background: none;
+    color: var(--color-rojo);
+    border: 2px solid var(--color-rojo);
+    border-radius: 10px;
+    padding: 0.5em;
+    font-size: 0.9em;
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: all 500ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.button-secondary--inactive{
+    width: 10vw;
+    background-color: transparent ;
+    border-radius: 50px;
     border: none;
+    color: white;
     padding: 0.2em;
     font-size: 1em;
     font-weight: 500;
     cursor: pointer;
+    transition: all 100ms;
 }
 
 .button-secondary--active{
@@ -36,6 +76,8 @@
     transition: all 100ms;
 }
 
+
+
 .button-submit{
     background-color: rgb(0, 153, 255);
     border-radius: 5px;
@@ -45,6 +87,7 @@
     font-weight: 500;
     transition: all 500ms;
     cursor: pointer;
+
     &:hover{
         transform: scale(1.1);
     }

@@ -1,0 +1,15 @@
+@import '../utils/Ani-Mixins/ani-mixins';
+.js-tag{
+    background-color: var(--color-amarillo);
+    font-size: 0.5em;
+    padding: 0.1em 1em ;
+    border-radius: 1em;
+    margin-left: 1em;
+    
+    
+}
+
+.tags-center{
+    display: flex;
+    align-items: center;
+}
