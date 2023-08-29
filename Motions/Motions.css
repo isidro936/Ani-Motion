@@ -263,4 +263,36 @@
   animation: entrance 1s ease forwards reverse;
 }
 
+.typewriter-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: typing 2s steps(40) forwards;
+  margin: 0;
+}
+
+.typewriter-container {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  border-right: 2px solid black;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
 /*# sourceMappingURL=Motions.css.map */

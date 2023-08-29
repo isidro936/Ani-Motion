@@ -7,6 +7,27 @@
 
 Ani-Motion936 es una librería de animaciones y efectos para desarrolladores web que desean agregar interactividad y atractivo visual a sus páginas web. Con Ani-Motion, puedes crear animaciones complejas y efectos de manera sencilla y sin la necesidad de escribir código complicado. La librería está diseñada para ser fácil de usar, ligera y altamente personalizable.
 
+# Novedades
+
+* ### **Motions**: 
+
+1. En todas las clases, se han reemplazado las propiedades de tiempo (timeout e interval) por simplemente "time".
+
+2. Se agrego un nuevo efecto a la libreria con codigo sass and JS: efecto de escritura **(type text)**
+
+* ### **Img-Effects**: 
+
+1. Se cambio el nombre del efecto sass "zoom-img" a "ImgScroll" para que concuerde con su contraparte JS.
+
+2. Se agrego nuevo efecto zoomImg: Este mixin aplica transición y escala a imágenes con suavidad al hacer hover.
+
+* ### **Buttons-Effects**:
+
+1. se agrego una clase ".btn-up" aplica animación al hacer hover con sombra y efecto de translación. 
+
+2. El mixin personalizado "btn-up" permite ajustes flexibles de sombra y translación.
+
+
 # Cómo Instalar Ani-Motion
 
 Puedes integrar Ani-Motion en tu proyecto de dos formas: descargando directamente desde el repositorio en la rama Dist o instalándolo mediante npm
@@ -225,3 +246,13 @@ Ani-Motion se distribuye bajo la Licencia MIT. Consulta el archivo LICENSE para 
 # Contacto
 
 Para cualquier consulta o comentario, no dudes en contactarnos a través de animotion936@gmail.com.
+
+# Redes sociales
+
+Puedes seguirnos en:
+
+* [You Tube](https://www.youtube.com/channel/UCnTyr-4JK53fifOkm0upwvQ)
+
+* [Tik Tok](https://www.tiktok.com/@ani_motion936)
+
+* [Instagram](https://www.instagram.com/animotion936/)

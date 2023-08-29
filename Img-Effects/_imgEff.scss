@@ -11,7 +11,25 @@
     -webkit-text-fill-color: transparent;
 }
 
-@mixin zoom-image($time, $time-line) {
+@mixin imgScroll($time, $time-line) {
     transform: scale(1);
     transition: transform $time $time-line;
+}
+
+@mixin zoomImg($width, $height) {
+    overflow: hidden;
+    width: $width; 
+    height: $height;
+
+    & img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        transform: scale(1.2);
+        transition: transform 0.3s ease-in-out;
+
+        &:hover{
+            transform: scale(1);
+        }
+    }
 }

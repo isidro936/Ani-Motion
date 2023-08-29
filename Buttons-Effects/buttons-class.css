@@ -2,6 +2,11 @@
   --transition:all 500ms;
 }
 
+button {
+  border: none;
+  background-color: white;
+}
+
 .btn-scale {
   transition: var(--transition);
 }
@@ -9,10 +14,21 @@
   transform: rotate(10deg) scale(1.1);
 }
 
+.Jbtn-scale {
+  transition: var(--transition);
+  transform: rotate(10deg) scale(1.1);
+}
+
 .btn-shadow {
   transition: var(--transition);
 }
 .btn-shadow:hover {
+  transform: translate(10px, -10px);
+  box-shadow: -10px 10px black;
+}
+
+.Jbtn-shadow {
+  transition: var(--transition);
   transform: translate(10px, -10px);
   box-shadow: -10px 10px black;
 }
@@ -55,6 +71,14 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   animation: loadingAnimation 1s both;
+}
+
+.btn-up {
+  transition: var(--transition);
+}
+.btn-up:hover {
+  box-shadow: 0px 5px 10px rgb(177, 177, 177);
+  transform: translateY(-5px);
 }
 
 /*# sourceMappingURL=buttons-class.css.map */
