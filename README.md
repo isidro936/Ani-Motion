@@ -7,6 +7,8 @@
 
 Ani-Motion936 es una librería de animaciones y efectos para desarrolladores web que desean agregar interactividad y atractivo visual a sus páginas web. Con Ani-Motion, puedes crear animaciones complejas y efectos de manera sencilla y sin la necesidad de escribir código complicado. La librería está diseñada para ser fácil de usar, ligera y altamente personalizable.
 
+**[Leer documentación](https://isidro936.github.io/Ani-Motion/docs.html)**
+
 # Novedades
 
 * ### **Motions**: 
