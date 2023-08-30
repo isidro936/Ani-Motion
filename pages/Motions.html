@@ -59,11 +59,12 @@
                 <li class="main-doc__li"><a href="Motions.html#TextChange">TextChange</a></li>
                 <li class="main-doc__li"><a href="Motions.html#aniIntersection">AniIntersection</a></li>
                 <li class="main-doc__li"><a href="Motions.html#aniObjects">AniObjects</a></li>
+                <li class="main-doc__li"><a href="Motions.html#TypeText">TypeText</a></li>
                 <li class="main-doc__list"><i class="bi bi-play-fill color-red"></i>Button-Effects</li>
-                <li class="main-doc__li"><a href="#s">Btn-scale</a></li>
-                <li class="main-doc__li"><a href="#s">Btn-shadow</a></li>
-                <li class="main-doc__li"><a href="#s">Btn-loading</a></li>
-                <li class="main-doc__li"><a href="#s">Btn-light</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html">Btn-scale</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html">Btn-shadow</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html">Btn-loading</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html">Btn-light</a></li>
                 <li class="main-doc__list"><i class="bi bi-image-fill color-green"></i>Img-Effects</li>
                 <li class="main-doc__li"><a href="#s">ParallaX</a></li>
                 <li class="main-doc__li"><a href="#s">TextImg</a></li>
@@ -74,7 +75,7 @@
             <header class="main-doc__header">
                 <div class="d-flex">
                     <h1 class="main-doc__title">Motions</h1>
-                    <a href="https://github.com/isidro936/Ani-Motion/tree/dist" class="button-secondary">Ver
+                    <a href="https://github.com/isidro936/Ani-Motion/tree/Dist" class="button-secondary">Ver
                         repositorio</a>
                 </div>
                 <h2 class="main-doc__subtitle">Aplica animaciones y efectos con js y más.</h2>
@@ -89,7 +90,7 @@
                         JavaScript en tu proyecto:</p>
                 </div>
                 <div class="about-content">
-                    <p class="color-pink">@use <span class="color-green">'ani-motion936/Motions/Motions'</span>;</p>
+                    <p class="color-pink">@use <span class="color-green">'ani-motion936/Motions/JMotions.js'</span>;</p>
                     <i class="bi-clipboard"></i>
                 </div>
                 <p class="main-doc__p">o puedes incluirlo directamente en el HTML, aunque para algunos efectos de texto
@@ -104,6 +105,10 @@
                     <p class="color-pink">import <span class="color-yellow">{ TextChange, AniIntersection, animation
                             }</span> from <span class="color-green">'ani-motion936/Motions/JMotions.js'</span></p>
                     <i class="bi-clipboard"></i>
+                </div>
+                <p class="main-doc__p">Tu archivo donde exportaras las clases de Motions, asegurate que tenga el <span class="color-blue">type="module"</span class="color-blue"></p>
+                <div class="about-content">
+                    <p>&lt;<span class="color-pink">script</span> type=<span class="color-green">"module"</span> src=<span class="color-green">"script.js"</span>></script></p><i class="bi bi-clipboard"></i>
                 </div>
             </section>
             <section class="main-doc__section" id="animation">
@@ -149,7 +154,7 @@
                         evento HTML válido, como 'click' o 'mouseenter'.</p>
                     <p><strong>5- Definir Tiempo de Finalización (Opcional):</strong> Si deseas que la clase de
                         animación se elimine después de un cierto período de tiempo, proporciona la propiedad <strong
-                            class="color-blue">timeout</strong> en milisegundos en el objeto de configuración. Esto es
+                            class="color-blue">time</strong> en milisegundos en el objeto de configuración. Esto es
                         útil para animaciones temporizadas.</p>
                     <h3>Ejemplo:</h3>
                     <div class="coding-sec">
@@ -162,7 +167,7 @@
                                     class="color-green">'fadeOff'</span>,</span><br>
                             <span class="space-tab color-yellow">event: <span
                                     class="color-green">'click'</span>,</span><br>
-                            <span class="space-tab color-yellow">timeout: <span class="color-blue">2000</span></span>
+                            <span class="space-tab color-yellow">time: <span class="color-blue">2000</span></span>
                             <br> });
                         </p>
                     </div>
@@ -172,7 +177,7 @@
                 </div>
             </section>
             <section class="main-doc__section" id="TextChange">
-                <h2 class="main-doc__title">TextChange</h2>
+                <h2 class="main-doc__title tags-center">TextChange <span class="js-tag">JS</span></h2>
                 <p class="main-doc__p">Este efecto te permite cambiar dinámicamente el contenido de un elemento HTML con
                     una serie de textos predefinidos. Aquí tienes una guía sobre cómo usar este efecto:</p>
                 <p><strong>1- Importar la Clase:</strong> Asegúrate de haber importado la clase TextChange desde la
@@ -186,7 +191,7 @@
                         de manera cíclica.</li>
                     <li><strong class="color-blue">animation:</strong> El nombre de la clase CSS que define la
                         animación.</li>
-                    <li><strong class="color-blue">interval:</strong> El intervalo de tiempo (en milisegundos) entre
+                    <li><strong class="color-blue">time:</strong> El intervalo de tiempo (en milisegundos) entre
                         cambios de texto.</li>
                 </ul>
                 <div class="coding-sec">
@@ -199,7 +204,7 @@
                                 class="color-green">'slideY'</span>,</span><br>
                         <span class="space-tab color-yellow">texts: [<span class="color-green">'Texto 1', 'Texto 2',
                                 'Texto 3'</span>],</span><br>
-                        <span class="space-tab color-yellow">interval: <span class="color-blue">3000</span></span>
+                        <span class="space-tab color-yellow">time: <span class="color-blue">3000</span></span>
                         <br> });
                     </p>
                 </div>
@@ -210,20 +215,12 @@
                 <p><strong>4- Personalización de Animación:</strong>
                     Puedes personalizar la animación aplicada al cambiar el texto al especificar la clase CSS en la
                     propiedad <strong class="color-blue">animation.</strong></p>
-                <p><strong>5- Detener el Cambio de Texto:</strong>
-                    Si deseas detener el cambio automático de texto en algún momento, utiliza el método <strong
-                        class="color-yellow">stopTextChange()</strong> en la instancia creada:</p>
-                <div class="about-content">
-                    <p class="color-yellow">
-                        TextChangeInstance.<span class="color-blue">stopTextChange()</span>
-                    </p> <i class="bi bi-clipboard"></i>
-                </div>
                 <div class="d-flex justify-center">
                     <a href="../examples.html" class="button-secondary">Probar animaciones</a>
                 </div>
             </section>
             <section class="main-doc__section" id="aniIntersection">
-                <h2 class="main-doc__title">aniIntersection</h2>
+                <h2 class="main-doc__title tags-center">aniIntersection <span class="js-tag">JS</span></h2>
                 <p class="main-doc__p">Este efecto de nuestra librería te permite aplicar animaciones a elementos HTML
                     cuando entran en la vista del usuario (viewport) mientras se desplaza por la página. Aquí te
                     mostramos cómo utilizar este efecto:</p>
@@ -240,7 +237,8 @@
                         animación.</ul>
                 </ul>
                 <div class="coding-sec">
-                    <p class="color-pink">const <span class="color-yellow">intersectionInstance</span>  = new <span class="color-blue">AniIntersection</span>({<br>
+                    <p class="color-pink">const <span class="color-yellow">intersectionInstance</span> = new <span
+                            class="color-blue">AniIntersection</span>({<br>
                         <span class=" space-tab color-yellow">element: document.querySelector(<span
                                 class="color-green">'.animated-element'</span>)</span>,<br>
                         <span class="space-tab color-yellow ">animation: <span class="color-green">'scale'</span>
@@ -252,9 +250,94 @@
                     <a href="../examples.html" class="button-tertiary">no dispoble en examples</a>
                 </div>
             </section>
-
+            <section class="main-doc__section" id="aniObjects">
+                <h2 class="main-doc__title tags-center">AniObjects <span class="js-tag">Objeto JS</span></h2>
+                <p class="main-doc__p">El objeto aniObjects es una referencia útil para acceder fácilmente a los nombres
+                    de las animaciones disponibles en la librería. Cada clave en este objeto representa un nombre
+                    descriptivo de una animación específica, mientras que los valores correspondientes son las cadenas
+                    que identifican dichas animaciones.</p>
+                <p>Al utilizar aniObjects, puedes acceder rápidamente a los nombres de las animaciones en tu código y
+                    pasarlos como parámetros a las funciones y clases de la librería. Esto facilita la aplicación de
+                    efectos de animación a tus elementos HTML sin tener que recordar los nombres exactos de las
+                    animaciones.</p>
+                <div class="coding-sec">
+                    <p class="color-pink">
+                        import<span class="color-yellow"> { aniObjects, animation } </span> from <span
+                            class="color-green"> 'ani-motion936/Motions/JMotions.js'</span>;
+                        <br>
+                        <br>
+                        const <span class="color-yellow">animationInstance</span> = new <span class="color-yellow">
+                            animation({</span><br>
+                        <span class="space-tab color-yellow">element: document.querySelector(<span
+                                class="color-green">'.my-element'</span> ),</span><br>
+                        <span class="space-tab color-yellow">animation: <span
+                                class="color-pink">aniObjects.slideY</span></span><br>
+                        });
+                    </p>
+                </div>
+                <p>Usando aniObjects, puedes acceder y aplicar fácilmente los efectos de animación disponibles en tu
+                    librería.</p>
+            </section>
+            <section class="main-doc__section" id="TypeText">
+                <h2 class="main-doc__title">TypeText</h2>
+                <p class="main-doc__p">La clase TypeText te permite incorporar el efecto de escritura de máquina de
+                    escribir en tus elementos HTML. Este efecto es ideal para resaltar contenido de manera llamativa y
+                    gradual. Además, se pueden utilizar los mixins <span class="color-blue">typewriter-container</span>
+                    y <span class="color-blue">typewriter-text</span> para personalizar el aspecto visual del efecto.
+                    Aquí tienes cómo utilizarlo:</p>
+                <p><strong>1- Importar la Clase TypeText:</strong> Asegúrate de importar la clase TypeText desde el
+                    archivo donde esté definida:</p>
+                <div class="about-content">
+                    <p class="color-pink">import<span class="color-yellow"> { TypeText } </span>from <span
+                            class="color-green">'ani-motion936/Motions/JMotions.js'</span>;</p><i
+                        class="bi bi-clipboard"></i>
+                </div>
+                <p><strong>2- Crear una Instancia de TypeText:</strong> Crea una instancia de la clase TypeText, pasando
+                    un objeto con las propiedades necesarias:</p>
+                <div class="coding-sec">
+                    <p class="color-pink">const <span class="color-yellow">typeWriter</span> = new <span
+                            class="color-yellow">TypeText</span> ({ <br>
+                        <span class="space-tab color-yellow">element: document.queryselector(<span
+                                class="color-green">'.my-text'</span>),</span><br>
+                        <span class="space-tab color-yellow">text: <span class="color-green">'hello
+                                world'</span>,</span><br>
+                        <span class="space-tab color-yellow">time: <span class="color-blue">50</span></span> <span
+                            class="color-black">// Opcional: ajusta el tiempo entre cada letra (en
+                            milisegundos)</span><br>
+                        });
+                    </p>
+                </div>
+                <p><strong>3- Personalización Visual con Mixins:</strong>
+                    Para personalizar el aspecto visual del efecto de escritura, puedes utilizar los mixins
+                    <span class="color-blue">typewriter-container</span> y <span
+                        class="color-blue">typewriter-text</span> que proporcionas. Estos mixins te permiten ajustar la
+                    apariencia de los contenedores y el texto que muestra el efecto.
+                </p>
+                <div class="coding-sec">
+                    <p>
+                        &lt;<span class="color-pink">div</span> <span class="color-blue">class=</span><span class="color-green">"my-text-container"</span>><br>
+                            <span class="space-tab">&lt;<span class="color-pink">p</span> <span class="color-blue">class=</span><span class="color-green">"my-text"</span>>&lt;<span class="color-pink">/p</span>></span><br>
+                        &lt;<span class="color-pink">/div</span>>
+                    </p>
+                </div>
+                <div class="coding-sec">
+                    <p class="color-pink">.my-text-container { <br>
+                        <span class="space-tab">@include <span class="color-blue">typewriter-container</span>($color: red, $border: 2px solid
+                            red)</span>;<br>
+                        <span class="space-tab color-black">// ...</span><br>
+                        } <br>
+                        .my-text { <br>
+                        <span class="space-tab">@include <span class="color-blue">typewriter-text</span>;</span><br>
+                        <span class="space-tab color-black">// ...</span><br>
+                        }</p>
+                </div>
+                <div class="d-flex justify-center">
+                    <a href="../examples.html" class="button-tertiary">no dispoble en examples</a>
+                </div>
+            </section>
         </main>
     </main>
+    <script src="../scss/components/copy-content.js"></script>
     <script type="module" src="../scss/components/nav.js"></script>
 </body>
 
