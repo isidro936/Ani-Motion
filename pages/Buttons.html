@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ani-Motion | Docs</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/animotion.png" type="image/x-icon">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- iconos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body class="body-doc">
+    <nav class="nav">
+        <div class="nav__logo-container">
+            <a href="../index.html" class="nav__logo">
+                <img src="../assets/animotion.png" alt="">
+            </a>
+        </div>
+        <ul class="nav__ul">
+            <li class="nav__li"><i class="bi bi-x"></i></li>
+            <li class="nav__li"><a href="../index.html" class="nav__link">Home</a></li>
+            <li class="nav__li"><a href="../docs.html" class="nav__link nav__li--active">Docs</a></li>
+            <li class="nav__li"><a href="../examples.html" class="nav__link">Examples</a></li>
+            <li class="nav__li"><a href="../about.html" class="nav__link">About</a></li>
+        </ul>
+
+        <div class="nav__version version">
+            <p class="nav__p"></p>
+        </div>
+
+        <div class="nav__toggle">
+            <i class="bi bi-list-nested nav__icon"></i>
+        </div>
+    </nav>
+    <main class="main-doc">
+        <aside class='main-doc__aside'>
+            <ul class="main-doc__ul">
+                <li class="main-doc__list"><i class="bi bi-puzzle-fill color-yellow"></i><a href="../docs.html">Ani-Mixin</a></li>
+                <li class="main-doc__li"><a href="../docs.html#slide">SlideY</a></li>
+                <li class="main-doc__li"><a href="../docs.html#slide">SlideX</a></li>
+                <li class="main-doc__li"><a href="../docs.html#fadeOff">FadeOff</a></li>
+                <li class="main-doc__li"><a href="../docs.html#rotate360">Rotate360</a></li>
+                <li class="main-doc__li"><a href="../docs.html#spiral">Spiral</a></li>
+                <li class="main-doc__li"><a href="../docs.html#float">Float</a></li>
+                <li class="main-doc__li"><a href="../docs.html#scale">Scale</a></li>
+                <li class="main-doc__li"><a href="../docs.html#scaleReverse">ScaleReverse</a></li>
+                <li class="main-doc__li"><a href="../docs.html#reboundTop">ReboundTop</a></li>
+                <li class="main-doc__li"><a href="../docs.html#vibrate">Vibrate</a></li>
+                <li class="main-doc__li"><a href="../docs.html#repose">Repose</a></li>
+                <li class="main-doc__li"><a href="../docs.html#roll">Roll</a></li>
+                <li class="main-doc__li"><a href="../docs.html#rolls">RollLeft</a></li>
+                <li class="main-doc__li"><a href="../docs.html#rolls">RollRight</a></li>
+                <li class="main-doc__list"><i class="bi bi-gear-fill color-orange"></i><a href="./Motions.html">Motions</a></li>
+                <li class="main-doc__li"><a href="Motions.html#animation">Animation</a></li>
+                <li class="main-doc__li"><a href="Motions.html#TextChange">TextChange</a></li>
+                <li class="main-doc__li"><a href="Motions.html#aniIntersection">AniIntersection</a></li>
+                <li class="main-doc__li"><a href="Motions.html#aniObjects">AniObjects</a></li>
+                <li class="main-doc__li"><a href="Motions.html#TypeText">TypeText</a></li>
+                <li class="main-doc__list"><i class="bi bi-play-fill color-red"></i><a href="./Buttons.html">Button-Effects</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html#btn-scale">Btn-scale</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html#btn-shadow">Btn-shadow</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html#btn-loading">Btn-loading</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html#btn-light">Btn-light</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html#btn-up">Btn-up</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html#eventButton">EventButtons</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html#effects">Effects</a></li>
+                <li class="main-doc__list"><i class="bi bi-image-fill color-green"></i><a href="./Img-Effects.html">Img-Effects</a></li>
+                <li class="main-doc__li"><a href="./Img-Effects.html#parallaX">ParallaX</a></li>
+                <li class="main-doc__li"><a href="./Img-Effects.html#textImg">TextImg</a></li>
+                <li class="main-doc__li"><a href="./Img-Effects.html#imgScroll">ImgScroll</a></li>
+                <li class="main-doc__li"><a href="./Img-Effects.html#zoomImg">ZoomImg</a></li>
+            </ul>
+        </aside>
+        <main class="main-doc__container">
+            <div class="main-doc__aside-close">
+                <i class="bi bi-three-dots"></i>
+            </div>
+            <header class="main-doc__header">
+                <div class="d-flex">
+                    <h1 class="main-doc__title">Buttons Effects</h1>
+                    <a href="https://github.com/isidro936/Ani-Motion/tree/Dist" class="button-secondary">Ver
+                        repositorio</a>
+                </div>
+                <h2 class="main-doc__subtitle">Librería que añade efectos visuales personalizados interactivos a
+                    botones.</h2>
+                <p class="main-doc__p margin-top">Esta pequeña librería proporciona una colección de efectos visuales
+                    personalizados para botones, que pueden ser activados o desactivados mediante eventos, añadiendo
+                    dinamismo y atractivo a la interacción con los usuarios.</p>
+                <p class="margin-top"><strong>Mixins en el proyecto: </strong>Añadir los mixins a tu proyecto es simple.
+                    Solo tienes que importarlos y aplicarlos a tus estilos con variables personalizadas, permitiéndote
+                    lograr efectos como animación, sombras y más con facilidad y flexibilidad.</p>
+                <p class="margin-top"><strong>Importar SASS:</strong></p>
+                <div class="about-content">
+                    <p class="color-pink">@import <span class="color-green">'./ani-motion936/Button-Effects/buttons'</span>;</p><i class="bi bi-clipboard"></i>
+                </div>
+            </header>
+            <section class="main-doc__section" id="btn-scale">
+                <h2 class="main-doc__title">Btn-scale</h2>
+                <p class="main-doc__p">Los botones que tienen esta clase se escalarán y rotarán ligeramente cuando el
+                    cursor se coloque sobre ellos.</p>
+                <h3 class="main-doc__section__title">Formas de aplicar el efecto</h3>
+                <p><strong>Clases CSS:</strong> Introduce dinamismo a tus botones con la clase <span
+                        class="color-blue">btn-scale</span>, que aplica un efecto de escala y rotación al hacer hover.
+                </p>
+                <p><strong>Mixins de SASS:</strong></p>
+                <div class="coding-sec">
+                    <p class="color-pink">
+                        <span>.button{</span><br>
+                        <span class="space-tab">@include <span class="color-yellow">btn-scale</span>($rotate: 10deg,
+                            $scale: 1.1);</span><br>
+                        <span class="color-black space-tab">//...</span><br>
+                        }
+                    </p>
+                </div>
+            </section>
+            <section class="main-doc__section" id="btn-shadow">
+                <h2 class="main-doc__title">btn-shadow</h2>
+                <p class="main-doc__p">Los botones con esta clase tendrán una sombra y se desplazarán hacia abajo y a la
+                    izquierda cuando se coloque el cursor sobre ellos.</p>
+                <h3 class="main-doc__section__title">Formas de aplicar al efecto</h3>
+                <p><strong>Clases CSS:</strong> Introduce dinamismo a tus botones con la clase <span
+                        class="color-blue">btn-shadow</span>, que aplica un efecto de escala y rotación al hacer hover.
+                </p>
+                <p><strong>Mixins de SASS:</strong></p>
+                <div class="coding-sec">
+                    <p class="color-pink">
+                        <span>.button{</span><br>
+                        <span class="space-tab">@include <span class="color-yellow">btn-shadow</span>($traslateX: 10px,
+                            $color: black);</span><br>
+                        <span class="color-black space-tab">//...</span><br>
+                        }
+                    </p>
+                </div>
+            </section>
+            <section class="main-doc__section" id="btn-light">
+                <h2 class="main-doc__title">btn-light</h2>
+                <p class="main-doc__p">Los botones con esta clase tendrán un suave resaltado en forma de sombra al hacer
+                    hover.</p>
+                <h3 class="main-doc__section__title">Formas de aplicar al efecto</h3>
+                <p><strong>Clases CSS:</strong> Introduce dinamismo a tus botones con la clase <span
+                        class="color-blue">btn-light </span>, que aplica un efecto de escala y rotación al hacer hover.
+                </p>
+                <p><strong>Mixins de SASS:</strong></p>
+                <div class="coding-sec">
+                    <p class="color-pink">
+                        <span>.button{</span><br>
+                        <span class="space-tab">@include <span class="color-yellow">btn-loading</span>($color: rgba(0,
+                            0, 0, 0.3), $time: 1s, $border-radius: 5px);</span><br>
+                        <span class="color-black space-tab">//...</span><br>
+                        }
+                    </p>
+                </div>
+            </section>
+            <section class="main-doc__section" id="btn-loading">
+                <h2 class="main-doc__title">btn-loading</h2>
+                <p class="main-doc__p">Los botones con esta clase mostrarán una animación de carga cuando se coloque el
+                    cursor sobre ellos.</p>
+                <h3 class="main-doc__section__title">Formas de aplicar al efecto</h3>
+                <p><strong>Clases CSS:</strong> Introduce dinamismo a tus botones con la clase <span
+                        class="color-blue">btn-loading</span>, que aplica un efecto de escala y rotación al hacer hover.
+                </p>
+                <p><strong>Mixins de SASS:</strong></p>
+                <div class="coding-sec">
+                    <p class="color-pink">
+                        <span>.button{</span><br>
+                        <span class="space-tab">@include <span class="color-yellow">btn-light</span>($color:
+                            #your-color);</span><br>
+                        <span class="color-black space-tab">//...</span><br>
+                        }
+                    </p>
+                </div>
+            </section>
+            <section class="main-doc__section" id="btn-up">
+                <h2 class="main-doc__title">btn-up</h2>
+                <p class="main-doc__p">Los botones con esta clase se elevarán ligeramente y tendrán una sombra cuando se
+                    coloque el cursor sobre ellos.</p>
+                <h3 class="main-doc__section__title">Formas de aplicar al efecto</h3>
+                <p><strong>Clases CSS:</strong> Introduce dinamismo a tus botones con la clase <span
+                        class="color-blue">btn-up</span>, que aplica un efecto de escala y rotación al hacer hover.</p>
+                <p><strong>Mixins de SASS:</strong></p>
+                <div class="coding-sec">
+                    <p class="color-pink">
+                        <span>.button{</span><br>
+                        <span class="space-tab">@include <span class="color-yellow">btn-up</span>($traslate: 5px,
+                            $color-shadow: #your-shadow-color);</span><br>
+                        <span class="color-black space-tab">//...</span><br>
+                        }
+                    </p>
+                </div>
+            </section>
+            <section class="main-doc__section" id="eventButton">
+                <h2 class="main-doc__title tags-center">eventButtons <span class="js-tag">JS</span></h2>
+                <p class="main-doc__p">La función eventButtons del archivo JavaScript permitirá que los efectos se
+                    activen o desactiven cuando se dispare un evento en el botón correspondiente.</p>
+                <h3 class="main-doc__section__title">Uso:</h3>
+                <div class="coding-sec">
+                    <p class="color-pink">
+                        <span>import { <span class="color-yellow">eventButtons</span> } from <span
+                                class="color-green">'./ani-motion936/Buttons-Effects/JButtons.js'</span>;</span><br>
+                        <br>
+                        <span>eventButtons({</span><br>
+                        <span class="color-yellow space-tab">element: document.queryselector(<span
+                                class="color-green">'.tu-botton'</span>),</span><br>
+                        <span class="color-yellow space-tab">event:<span class="color-green">'click'</span>,</span><br>
+                        <span class="color-yellow space-tab">effect:<span
+                                class="color-green">'Jbtn-loading'</span></span><br>
+                        })
+                    </p>
+                </div>
+            </section>
+            <section class="main-doc__section" id="effects">
+                <h2 class="main-doc__title tags-center">Effects <span class="js-tag">Objeto JS</span></h2>
+                <p class="main-doc__p">Los efectos disponibles se almacenan en el objeto effects del archivo JavaScript.</p>
+                <h3 class="main-doc__section__title">Uso:</h3>
+                <div class="coding-sec">
+                    <p class="color-pink">
+                        <span>import { <span class="color-yellow">eventButtons , effects</span> } from <span
+                                class="color-green">'./ani-motion936/Buttons-Effects/JButtons.js'</span>;</span><br>
+                        <br>
+                        <span>eventButtons({</span><br>
+                        <span class="color-yellow space-tab">element: document.queryselector(<span
+                                class="color-green">'.tu-botton'</span>),</span><br>
+                        <span class="color-yellow space-tab">event:<span class="color-green">'click'</span>,</span><br>
+                        <span class="color-yellow space-tab">effect:<span
+                                class="color-pink"> effects.<span class="color-blue">scale</span></span></span><br>
+                        })
+                    </p>
+                </div>
+            </section>
+        </main>
+    </main>
+    <script type="module" src="../scss/pages/doc.js"></script>
+    <script src="../scss/components/copy-content.js"></script>
+    <script type="module" src="../scss/components/nav.js"></script>
+</body>
+
+</html>

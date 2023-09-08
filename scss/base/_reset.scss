@@ -4,6 +4,7 @@ $color-primario:#424242;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 img, picture, video{
@@ -58,4 +59,26 @@ body{
     width: 100%;
     display: flex;
     gap: 1em;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    justify-content: center;
+}
+
+.margin-top{
+    margin-top: 2em;
+}
+
+.body-construct{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

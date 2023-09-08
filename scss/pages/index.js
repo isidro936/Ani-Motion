@@ -1,31 +1,9 @@
 import {TextChange, AniIntersection, animation} from '../utils/Motions.js'
-const btnCopy = document.querySelectorAll('.bi-clipboard');
-
-btnCopy.forEach((btncopiar) => {
-    btncopiar.addEventListener('click', () => {
-        var contenido = btncopiar.previousElementSibling.textContent;
-        var inputTemporal = document.createElement('input');
-        inputTemporal.value = contenido;
-        document.body.appendChild(inputTemporal);
-        inputTemporal.select();
-        document.execCommand('copy');
-        document.body.removeChild(inputTemporal);
-
-        btncopiar.classList.remove('bi-clipboard');
-        btncopiar.classList.add('bi-clipboard-check');
-
-        setTimeout(() => {
-            btncopiar.classList.remove('bi-clipboard-check');
-            btncopiar.classList.add('bi-clipboard');
-        }, 2000);
-    });
-});
 
 
-
-new TextChange({
+const textChangeHeader = new TextChange({
     element: document.querySelector('.header__span'),
-    texts:['Mixins','Motions','Effects'],
+    texts:['Mixins','Motions','Button-Effects', 'Img-Effects'],
     animation:'slideY',
     interval: 3000,
     
@@ -61,7 +39,7 @@ new AniIntersection({
     animation: 'slideY'
 })
 
-new TextChange({
+const texts = new TextChange({
     element: document.querySelector('.about-mixin_elementP'),
     texts:[' potencia!',' versatilidad!'],
     animation:'fadeOff',
