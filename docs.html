@@ -54,23 +54,30 @@
                 <li class="main-doc__li"><a href="#roll">Roll</a></li>
                 <li class="main-doc__li"><a href="#rolls">RollLeft</a></li>
                 <li class="main-doc__li"><a href="#rolls">RollRight</a></li>
-                <li class="main-doc__list"><i class="bi bi-gear-fill color-orange"></i>Motions</li>
+                <li class="main-doc__list"><i class="bi bi-gear-fill color-orange"></i><a href="./pages/Motions.html">Motions</a></li>
                 <li class="main-doc__li"><a href="pages/Motions.html#animation">Animation</a></li>
                 <li class="main-doc__li"><a href="pages/Motions.html#TextChange">TextChange</a></li>
                 <li class="main-doc__li"><a href="pages/Motions.html#aniIntersection">AniIntersection</a></li>
                 <li class="main-doc__li"><a href="pages/Motions.html#aniObjects">AniObjects</a></li>
-                <li class="main-doc__list"><i class="bi bi-play-fill color-red"></i>Button-Effects</li>
-                <li class="main-doc__li"><a href="./pages/Buttons.html">Btn-scale</a></li>
-                <li class="main-doc__li"><a href="./pages/Buttons.html">Btn-shadow</a></li>
-                <li class="main-doc__li"><a href="./pages/Buttons.html">Btn-loading</a></li>
-                <li class="main-doc__li"><a href="./pages/Buttons.html">Btn-light</a></li>
-                <li class="main-doc__list"><i class="bi bi-image-fill color-green"></i>Img-Effects</li>
-                <li class="main-doc__li"><a href="#s">ParallaX</a></li>
-                <li class="main-doc__li"><a href="#s">TextImg</a></li>
-                <li class="main-doc__li"><a href="#s">zoom-image</a></li>
+                <li class="main-doc__list"><i class="bi bi-play-fill color-red"></i><a href="./pages/Buttons.html">Button-Effects</a></li>
+                <li class="main-doc__li"><a href="./pages/Buttons.html#btn-scale">Btn-scale</a></li>
+                <li class="main-doc__li"><a href="./pages/Buttons.html#btn-shadow">Btn-shadow</a></li>
+                <li class="main-doc__li"><a href="./pages/Buttons.html#btn-loading">Btn-loading</a></li>
+                <li class="main-doc__li"><a href="./pages/Buttons.html#btn-light">Btn-light</a></li>
+                <li class="main-doc__li"><a href="./pages/Buttons.html#btn-up">Btn-up</a></li>
+                <li class="main-doc__li"><a href="./pages/Buttons.html#eventButton">EventButtons</a></li>
+                <li class="main-doc__li"><a href="./pages/Buttons.html#effects">Effects</a></li>
+                <li class="main-doc__list"><i class="bi bi-image-fill color-green"></i><a href="./pages/Img-Effects.html">Img-Effects</a></li>
+                <li class="main-doc__li"><a href="./pages/Img-Effects.html#parallaX">ParallaX</a></li>
+                <li class="main-doc__li"><a href="./pages/Img-Effects.html#textImg">TextImg</a></li>
+                <li class="main-doc__li"><a href="./pages/Img-Effects.html#imgScroll">ImgScroll</a></li>
+                <li class="main-doc__li"><a href="./pages/Img-Effects.html#zoomImg">ZoomImg</a></li>
             </ul>
         </aside>
         <main class="main-doc__container">
+            <div class="main-doc__aside-close">
+                <i class="bi bi-three-dots"></i>
+            </div>
             <header class="main-doc__header">
                 <div class="d-flex">
                     <h1 class="main-doc__title">Ani-Mixin</h1>
@@ -409,7 +416,7 @@
                     <a href="examples.html" class="button-secondary">Probar animaciones</a>
                 </div>
             </section>
-            <section class="" id="rolls">
+            <section class="main-doc__section" id="rolls">
                 <h2 class="main-doc__title">RollLeft and RollRight</h2>
                 <p class="main-doc__p">Los efectos "RollLeft" y "RollRight" aportan una animación de giro y
                     desplazamiento horizontal a tus elementos, creando un efecto visual cautivador. Al utilizar los
@@ -456,8 +463,7 @@
     </main>
 
 </body>
-
+<script type="module" src="scss/pages/doc.js"></script>
 <script type="module" src="scss/components/nav.js"></script>
 <script src="scss/components/copy-content.js"></script>
-<script src="scss/pages/docs.js"></script>
 </html>

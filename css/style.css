@@ -311,6 +311,12 @@ span {
   .button-secondary {
     width: 90%;
   }
+  .button-secondary--active {
+    width: 50%;
+  }
+  .button-secondary--inactive {
+    width: 50%;
+  }
 }
 .nav {
   width: 100%;
@@ -408,7 +414,7 @@ span {
   color: white;
 }
 .version ::after {
-  content: "versión 1.1";
+  content: "versión 1.2";
 }
 
 .about-content {
@@ -932,10 +938,11 @@ span {
   display: flex;
   padding: 1em;
   padding-left: 3em;
-  overflow-y: auto;
+  overflow-x: hidden;
   border-right: 1px solid rgba(0, 0, 0, 0.155);
   box-shadow: 4px 0px 7px -5px rgba(0, 0, 0, 0.25);
   height: calc(100vh - 4em);
+  position: relative;
 }
 .main-doc__ul {
   display: flex;
@@ -978,6 +985,7 @@ span {
   gap: 2em;
   padding: 2em;
   overflow-y: auto;
+  position: relative;
 }
 .main-doc__content {
   color: white;
@@ -1005,7 +1013,98 @@ span {
   font-size: 1em;
   font-weight: 500;
 }
+.main-doc__aside-close {
+  padding: 0.5em 0.7em;
+  display: none;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  font-size: 2em;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.259);
+  z-index: 10;
+  cursor: pointer;
+}
 
+.my-seccion {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: url("https://img.freepik.com/premium-photo/luxurious-floral-elements-botanical-background-wallpaper-design-prints-3d-render_717906-525.jpg?w=2000");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.mi-elemento-de-texto {
+  width: 100%;
+  text-align: center;
+  font-size: 5em;
+  font-weight: 900;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: url("https://img.freepik.com/premium-photo/luxurious-floral-elements-botanical-background-wallpaper-design-prints-3d-render_717906-525.jpg?w=2000");
+}
+
+.mi-contenedor-de-imagen {
+  border-radius: 5px;
+  overflow: hidden;
+  width: 300px;
+  height: 200px;
+}
+.mi-contenedor-de-imagen img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+.mi-contenedor-de-imagen img:hover {
+  transform: scale(1);
+}
+
+@media (max-width: 800px) {
+  .main-doc {
+    display: flex;
+  }
+  .main-doc__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .main-doc__title {
+    white-space: nowrap;
+  }
+  .main-doc__aside {
+    width: 0%;
+    transition: all 500ms;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    padding: 0em;
+  }
+  .main-doc__aside--active {
+    width: 60%;
+    padding: 1em;
+    padding-left: 3em;
+  }
+  .main-doc__aside-close {
+    display: block;
+  }
+  .mi-elemento-de-texto {
+    font-size: 2em;
+  }
+  .d-flex-img {
+    flex-direction: column;
+  }
+}
 .main-docs {
   height: calc(100vh - 4em);
   display: grid;

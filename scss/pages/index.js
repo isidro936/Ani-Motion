@@ -3,13 +3,11 @@ import {TextChange, AniIntersection, animation} from '../utils/Motions.js'
 
 const textChangeHeader = new TextChange({
     element: document.querySelector('.header__span'),
-    texts:['Mixins','Motions','Effects'],
+    texts:['Mixins','Motions','Button-Effects', 'Img-Effects'],
     animation:'slideY',
     interval: 3000,
     
 })
-
-textChangeHeader.stopTextChange()
 
 
 new animation({
@@ -47,5 +45,3 @@ const texts = new TextChange({
     animation:'fadeOff',
     interval: 2000
 })
-
-texts.stopTextChange()

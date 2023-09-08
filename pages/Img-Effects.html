@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,7 @@
     <!-- iconos Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
-<body>
+<body class="body-doc">
     <nav class="nav">
         <div class="nav__logo-container">
             <a href="../index.html" class="nav__logo">
@@ -38,7 +37,7 @@
     <main class="main-doc">
         <aside class='main-doc__aside'>
             <ul class="main-doc__ul">
-                <li class="main-doc__list"><i class="bi bi-puzzle-fill color-yellow"></i> Ani-Mixin</li>
+                <li class="main-doc__list"><i class="bi bi-puzzle-fill color-yellow"></i><a href="../docs.html">Ani-Mixin</a></li>
                 <li class="main-doc__li"><a href="../docs.html#slide">SlideY</a></li>
                 <li class="main-doc__li"><a href="../docs.html#slide">SlideX</a></li>
                 <li class="main-doc__li"><a href="../docs.html#fadeOff">FadeOff</a></li>
@@ -53,23 +52,151 @@
                 <li class="main-doc__li"><a href="../docs.html#roll">Roll</a></li>
                 <li class="main-doc__li"><a href="../docs.html#rolls">RollLeft</a></li>
                 <li class="main-doc__li"><a href="../docs.html#rolls">RollRight</a></li>
-                <li class="main-doc__list"><i class="bi bi-gear-fill color-orange"></i>Motions</li>
+                <li class="main-doc__list"><i class="bi bi-gear-fill color-orange"></i><a href="./Motions.html">Motions</a></li>
                 <li class="main-doc__li"><a href="Motions.html#animation">Animation</a></li>
                 <li class="main-doc__li"><a href="Motions.html#TextChange">TextChange</a></li>
                 <li class="main-doc__li"><a href="Motions.html#aniIntersection">AniIntersection</a></li>
                 <li class="main-doc__li"><a href="Motions.html#aniObjects">AniObjects</a></li>
                 <li class="main-doc__li"><a href="Motions.html#TypeText">TypeText</a></li>
-                <li class="main-doc__list"><i class="bi bi-play-fill color-red"></i>Button-Effects</li>
-                <li class="main-doc__li"><a href="./Buttons.html">Btn-scale</a></li>
-                <li class="main-doc__li"><a href="./Buttons.html">Btn-shadow</a></li>
-                <li class="main-doc__li"><a href="./Buttons.html">Btn-loading</a></li>
-                <li class="main-doc__li"><a href="./Buttons.html">Btn-light</a></li>
-                <li class="main-doc__list"><i class="bi bi-image-fill color-green"></i>Img-Effects</li>
-                <li class="main-doc__li"><a href="#s">ParallaX</a></li>
-                <li class="main-doc__li"><a href="#s">TextImg</a></li>
-                <li class="main-doc__li"><a href="#s">zoom-image</a></li>
+                <li class="main-doc__list"><i class="bi bi-play-fill color-red"></i><a href="./Buttons.html">Button-Effects</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html#btn-scale">Btn-scale</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html#btn-shadow">Btn-shadow</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html#btn-loading">Btn-loading</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html#btn-light">Btn-light</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html#btn-up">Btn-up</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html#eventButton">EventButtons</a></li>
+                <li class="main-doc__li"><a href="./Buttons.html#effects">Effects</a></li>
+                <li class="main-doc__list"><i class="bi bi-image-fill color-green"></i><a href="./Img-Effects.html">Img-Effects</a></li>
+                <li class="main-doc__li"><a href="./Img-Effects.html#parallaX">ParallaX</a></li>
+                <li class="main-doc__li"><a href="./Img-Effects.html#textImg">TextImg</a></li>
+                <li class="main-doc__li"><a href="./Img-Effects.html#imgScroll">ImgScroll</a></li>
+                <li class="main-doc__li"><a href="./Img-Effects.html#zoomImg">ZoomImg</a></li>
             </ul>
-        </aside>
+        </aside>     
+        <main class="main-doc__container">
+            <div class="main-doc__aside-close">
+                <i class="bi bi-three-dots"></i>
+            </div>
+            <header class="main-doc__header">
+                <div class="d-flex">
+                    <h1 class="main-doc__title">Img-Effects</h1>
+                    <a href="https://github.com/isidro936/Ani-Motion/tree/Dist" class="button-secondary">Ver
+                        repositorio</a>
+                </div>
+                <h2 class="main-doc__subtitle">Este conjunto de la librería ofrece potentes mixins y funciónes de
+                    JavaScript para mejorar la experiencia visual en tu sitio web.</h2>
+                <div class="d-flex flex-column">
+                    <h3 class="main-doc__section__title margin-top">Uso:</h3>
+                    <p>Importar mixins de SASS</p>
+                    <div class="about-content">
+                        <p class="color-pink">@import <span
+                                class="color-green">'./ani-motion936/Img-Effects/imgEff'</span>;</p><i
+                            class="bi bi-clipboard"></i>
+                    </div>
+                    <p>Importar JS</p>
+                    <div class="about-content">
+                        <p class="color-pink">import <span class="color-yellow">{}</span> from <span
+                                class="color-green">'./ani-motion936/Img-Effects/imgEff.js'</span></p><i
+                            class="bi bi-clipboard"></i>
+                    </div>
+                </div>
+            </header>
+            <section class="main-doc__section" id="parallaX">
+                <h2 class="main-doc__title">ParralaX</h2>
+                <p class="main-doc__p">El mixin Parallax te permite crear efectos de fondo en parallax para elementos
+                    HTML, como secciones o divs. Asegúrate de tener configuradas las siguientes propiedades:</p>
+                <div class="d-flex">
+                    <div class="coding-sec">
+                        <p class="color-pink">
+                            <span>.my-seccion{</span><br>
+                            <span class="space-tab">@include <span class="color-yellow">parallaX</span></span><br>
+                            <span class="color-black space-tab">//...</span><br>
+                            }
+                        </p>
+                    </div>
+                    <div class="my-seccion"></div>
+                </div>
+            </section>
+            <section class="main-doc__section" id="textImg">
+                <h2 class="main-doc__title">TextImg</h2>
+                <p class="main-doc__p">Este mixin se utiliza para aplicar un efecto de recorte de fondo de texto a
+                    elementos HTML. Esto es útil para resaltar texto con imágenes de fondo. Aplica el mixin de la
+                    siguiente manera:</p>
+                <div class="d-flex-img">
+                    <div class="coding-sec">
+                        <p class="color-pink">
+                            <span>.mi-elemento-de-texto{</span><br>
+                            <span class="space-tab">@include <span class="color-yellow">parallaX</span>;</span><span
+                                class="color-black"> // el efecto parallaX aqui es opcional</span><br>
+                            <span class="space-tab">@include <span class="color-yellow">textImg</span>;</span><br>
+                            <span class="color-black space-tab">/* Otras propiedades de estilo */</span><br>
+                            }
+                        </p>
+                    </div>
+                    <p class="mi-elemento-de-texto">Hello world</p>
+                </div>
+            </section>
+            <section class="main-doc__section" id="imgScroll">
+                <h2 class="main-doc__title">imgScroll</h2>
+                <p class="main-doc__p">La función imgScroll se utiliza para aplicar efectos de escala en imágenes en
+                    función del desplazamiento vertical de la página. Asegúrate de importar esta función en tu proyecto
+                    JavaScript más el mixin y configurarla con las siguientes opciones:</p>
+                <h3>Mixin</h3>
+                <div class="coding-sec">
+                    <p class="color-pink">
+                        <span>.mi-imagen{</span><br>
+                        <span class="space-tab">@include <span class="color-yellow">imgScroll</span>;</span><br>
+                        <span class="color-black space-tab">/* Otras propiedades de estilo */</span><br>
+                        }
+                    </p>
+                </div>
+                <h3 class="main-doc__section__title">JS</h3>
+                <div class="coding-sec">
+                    <p>
+                        <span class="color-pink">import <span class="color-yellow">{ imgScroll } </span> from <span
+                                class="color-green">'./ani-motion936/Img-Effects/imgEff.js'</span>;</span><br>
+                        <br>
+                        <span class="color-pink">const <span class="color-yellow">options</span> = <span
+                                class="color-pink">{</span></span><br>
+                        <span class=" space-tab color-yellow">element:<span class="color-pink">
+                                document.querySelector</span>(<span class="color-green">'.tu-imagen'</span>),</span><br>
+                        <span class=" space-tab color-yellow">units:<span class="color-blue"> 0.02</span>,<span
+                                class="color-black">// Ajusta la velocidad del efecto</span></span><br>
+                        <span class=" space-tab color-yellow">minScale:<span class="color-blue"> 1</span>,<span
+                                class="color-black">// Escala mínima permitida</span> </span><br>
+                        <span class=" space-tab color-yellow">maxScale:<span class="color-blue"> 2</span>,<span
+                                class="color-black">// Escala máxima permitida</span> </span><br>
+                        <span class="color-pink">};</span><br>
+                        <br>
+                        <span class="color-pink">imgScroll<span class="color-yellow">(options)</span>;</span>
+                    </p>
+                </div>
+            </section>
+            <section class="main-doc__section" id="zoomImg">
+                <h2 class="main-doc__title">zoomImg</h2>
+                <p class="main-doc__p">El mixin ZoomImg permite crear un efecto de zoom suave en imágenes contenidas
+                    dentro de elementos. Debes especificar el ancho y la altura deseados. Aplica el mixin así:</p>
+                <div class="coding-sec">
+                    <p class="color-pink">
+                        .mi-contenedor-de-imagen {<br>
+                        <span class="space-tab">@include zoomImg(<span class="color-blue">300px, 200px</span>); <span
+                                class="color-black">/* Ancho y altura personalizados */</span></span><br>
+                        }
+                    </p>
+                </div>
+                <div class="d-flex justify-center">
+                    <div class="mi-contenedor-de-imagen">
+                        <img src="https://img.freepik.com/premium-photo/luxurious-floral-elements-botanical-background-wallpaper-design-prints-3d-render_717906-525.jpg?w=2000"
+                            alt="">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </main>
+    <script type="module" src="scss/pages/doc.js"></script>
+    <script type="module" src="./Img-Js.js"></script>
+    <script src="../scss/components/copy-content.js"></script>
+    <script type="module" src="../scss/components/nav.js"></script>
 </body>
 
 </html>
